@@ -1,0 +1,238 @@
+/*
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0ece2;
+}
+@font-face {
+    font-family: "ardoise";
+    src:
+        url("/font-family-ardoise/fonts/fonnts.com-Ardoise_Std.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "myriad-pro";
+    src:
+        url("/font-family-myriad-pro/MYRIADPRO-REGULAR.OTF") format("opentype");
+}
+/* General styles  and typographie */
+
+h1 {font-family: ardoise;
+    font-size: 4em;
+    font-weight: bold;}
+
+h2, h3 {
+    font-family: ardoise, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+p {
+    font-family: myriad-pro;
+    font-size: 1em;
+    text-align: center;
+}
+.spacer20px {
+    font-size: 20px;
+    padding: 10px;
+}
+
+/*le header */
+
+header {
+    padding: 0px;
+    max-width: 100vw;
+    height: auto;
+    align-items: center;
+    box-sizing: border-box;
+
+    }
+
+header img {
+    width: 100%;
+    height: auto;
+} 
+.menu-header {
+    display: flex;
+    justify-content: space-around;
+}
+.menu-header a {
+    display: inline;
+    font-size: large;
+
+}
+
+/* ******************************** à partir de là c'est différent pour ls autres pages ***************/
+.bandeau-dates {
+    max-width: 100vw;
+}
+
+.bandeau-intercalaire {
+    max-width: 100 vw;
+    background-color: #004160;
+    color: white;
+    font-family: ardoise;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px;
+}
+/* main */
+
+main {
+    padding: 5%;
+    max-width: 100vw;
+    height: auto;
+    background-color: rgb(192, 91, 91);
+    box-sizing: border-box;
+}
+/* réduire la taille des section */
+
+section {
+    padding: 10px;
+    max-width: 95vw;
+    height: auto;
+    background-color: green;
+    box-sizing: border-box;
+} 
+
+/* ajuster la taille des images */
+.bandeau-dates > img {
+    width: 100%;
+}
+.photo1 > img {
+    width:300px;
+    height:auto;
+}
+
+.photo2 > img {
+    width:300px;
+    height:auto;
+}
+.photo3 > img {
+    width:300px;
+    height:auto;
+}
+
+
+/* flex container des photos, 1ere section*/
+
+
+
+.container-photos-sculptures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+    max-height: auto;
+}
+
+@media (max-width: 425px) {
+    .container-photos-sculptures > img{
+        width: 100%;
+    }}
+
+/* flex conteneur des vignettes artiste-image-et-texte-vertical, 2eme section*/
+
+/* d'abord réduire les vignettes */
+
+.artiste-image-et-texte-vertical > * {
+    width: 300px;
+    padding:10px;
+}
+.container-vignettes-artistes {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100vw;
+    justify-content: space-around;
+}
+
+
+/* troisième section, déterminer la taille de base du texte et de la photo */
+
+.PhotoFacade > img {
+    width: 800px;
+}
+.paragraphe-batiment {
+    width: 450px;
+}
+
+/* conteneur flex */
+
+.container-section3 {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: space-around;
+}
+
+/* pour les formats portables, la photo prend toute la place, le texte en-dessous */
+
+.PhotoFacade > img {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+.paragraphe-batiment {
+    width: 100%;
+}
+/* pour les formats PC, la photo et le texte sont cote à cote*/
+    
+@media (min-width: 768px) {
+        .PhotoFacade {
+        width: 50%;
+         }
+        .paragraphe-batiment {
+         width: 50%;
+        }
+}
+
+/* centrer le texte dans sa div */
+
+.paragraphe-batiment > p {
+    padding-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+}
+
+.paragraphe-batiment a {
+    padding-left: 40%;
+}
+
+
+
+
+
+
+
+/* footer  à corriger!!!!*/
+
+
+
+/* largeur et hauteur */
+
+.monFooter {
+    padding: 30px;
+    max-width: 100vw;
+    height: 10vh;
+    align-items: center;
+    background-color: #ffcf53;
+}
+    
+.menu-footer {
+    display: flex;
+    justify-content: space-around;
+}
+.menu-footer a {
+    display: inline;
+    background-color: #ffcf53;
+    font-size: large;
+
+}
+footer p {
+    background-color: #ffcf53;
+    padding-bottom: 20px;
+    width: 100vw;
+}
