@@ -5,9 +5,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-main{
+main {
     background-color:#f0ece2;
 }
+
 @font-face {
     font-family: "ardoise";
     src:
@@ -19,8 +20,8 @@ main{
     src:
         url("/font-family-myriad-pro/MYRIADPRO-REGULAR.OTF") format("opentype");
 }
-/* General styles  and typographie pour les écrans tablettes et pc */
 
+/* General styles  and typographie */
 
 h1 {
     text-align: center;
@@ -54,6 +55,7 @@ article > p {
     text-align: left;
     hyphens: auto;
 }
+
 /* ---------------taille des polices pour les tablettes --------*/
 
 @media screen and (width <=769px) {
@@ -64,6 +66,7 @@ article > p {
     }
     
 }
+
 /* ---------------taille des polices pour les portables -------- */
 
 @media screen and (width <= 426px){
@@ -123,6 +126,7 @@ header {
     top:20px;
     right:20px;
 }
+
 /* ----------dessin musée manipulations ici ----------- */
 
 @media (min-width:768px) {
@@ -160,7 +164,6 @@ header {
     }
 }
 
-
 /* ---------------------boite cachée (ou pas) du menu----------------- */
 
 /* alignement du menu à droite */
@@ -192,18 +195,7 @@ header a{
   right: -9999px;
 }
 
-/*
-.menu-header {
-    display: flex;
-    justify-content: space-around;
-}
-.menu-header a {
-    display: inline;
-    font-size: large;
 
-}
-
-/* ******************************** à partir de là c'est différent pour ls autres pages ***************/
 
 .bandeau-intercalaire {
     max-width: 100 vw;
@@ -222,100 +214,18 @@ header a{
 /* main */
 
 main {
-    margin-top: 0%;
+    margin-top: 0;
     padding: 0;
     max-width: 100vw;
     height: auto;
     box-sizing: border-box;
 }
-/* réduire la taille des section */
-
-section {
-    padding: 10px;
-    max-width: 100%;
-    height: auto;
-    box-sizing: border-box;
-} 
-
-
-/* ajuster la taille des images et du texte sur le sculpteur GEK */
-
-.photo1 > img {
-    width:300px;
-    height:auto;
-}
-
-.photo2 > img {
-    width:300px;
-    height:auto;
-}
-.photo3 > img {
-    width:300px;
-    height:auto;
-}
-
-
-
-/* flex container des photos, 1ere section*/
-
-
-.container-photos-sculptures {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 100%;
-    max-height: auto;
-}
-.texte-GEK{
+.photo-bandeau-horaires {
     width:100%;
-    height:auto;
-    padding-top: 2%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 2%;
 }
-
-@media (max-width: 768px) {
-    .container-photos-sculptures > img{
-        width: 100%;
-        }
-    .texte-GEK{
-        width:300px;
-        height:auto;
-        padding-top: 2%;
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-bottom: 5%;
-    }
-    }
-.bouton-horaires-ouverture {
-    width:250px;
-    height: 60px;
-    border: solid;
-    border-color: #560404;
-    border-radius: 10px;
-    background-color: #457b65;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;;
+.photo-bandeau-horaires > img {
+    width: 100%;
 }
-.bouton-horaires-ouverture > a {
-
-    text-decoration: none;
-    background-color: #457b65;
-    color: #ffcf53;
-}
-@media (min-width:768px) {
-    .bouton-horaires-ouverture {
-        margin: auto;
-    }
-    .texte-GEK > p {
-        margin-bottom: 30px;
-    }
-}
-
-/* flex conteneur des vignettes artiste-image-et-texte-vertical, 2eme section*/
 
 /* flex conteneur des vignettes artiste-image-et-texte-vertical, et artiste-image-et-texte-horizontal */
 
@@ -354,7 +264,6 @@ section {
     margin: 32px;
 }
 
-
 /* pour les TELEPHONES PORTABLES et les TRES GRANDS PC, toutes les vignettes horizontales sont supprimées    */
 
 @media (max-width:426px) , (min-width:1330px) {
@@ -366,7 +275,7 @@ section {
     }
 }
 /* lors des changements d'expositions, normalement il suffit de changer le fichier HTML, le code CSS est écrit de manière
-à prendre en compte 2, 3, ou 4 artistes à chaque exposition */
+à prendre en compte 2, 3, ou 4 artistes à chaque exposition*/
 
 /* s'il y a TROIS ARTISTES, en FORMAT TABLETTE, 
 la 3eme vignette est horizontale et le texte est à droite */
@@ -403,110 +312,6 @@ donc on supprime les versions redondantes */
 
 
 
-/* mise en forme lien vers programme de la saison */
-
-.bouton-vers-programme-saison {
-    width:250px;
-    height:60px;
-    border-radius: 10px;
-    border: solid;
-    border-bottom: #560404;
-    background-color: #457b65;
-    text-align: center;
-    padding: 10px;
-    margin:auto;
-    
-}
-
-.bouton-vers-programme-saison > a {
-    text-decoration: none;
-    background-color: #457b65;
-    color:#ffcf53;
-}
-
-
-/* troisième section, déterminer la taille de base du texte et de la photo */
-
-.photoFacade {
-    max-width:400px;
-    min-width:300px;
-}
-
-.PhotoFacade > img {
-    width:100%;
-}
-.paragraphe-batiment {
-    min-width:300px;
-    max-width: 400px;
-}
-.paragraphe-batiment > article{
-    text-align:left;
-    padding:10px;
-}
-
-
-/* pour les formats PC & tablette, la photo et le texte sont cote à cote, le bouton sous le texte */
-
-@media (min-width:768px) {
-
-/* conteneur flex */
-    .container-section3 {
-    display: flex;
-    max-width: 100%;
-    justify-content: center;
-    display: wrap;
-    }
-
-    .PhotoFacade > img {
-    width: 100%;
-    height: auto;
-    padding: 10px;
-    }
-    .paragraphe-batiment {
-    width: 100%;
-    display:flex;
-    justify-content:center;
-    flex-wrap: wrap;
-    }
-}
-
-/* centrer le texte dans sa div */
-
-.paragraphe-batiment > p {
-    padding-top: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
-/* mise en forme du bouton vers nous trouver */
-
-.bouton-vers-nous-trouver-300 {
-    width:250px;
-    height: 60px;
-    border: solid;
-    border-color: #560404;
-    border-radius: 10px;
-    background-color: #457b65;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;;
-}
-.bouton-vers-nous-trouver-300 > a {
-
-    text-decoration: none;
-    background-color: #457b65;
-    color: #ffcf53;
-}
-@media(max-width:767px) {
-    .bouton-vers-nous-trouver-300 {
-        margin: auto;
-    }
-    .paragraphe-batiment > p {
-        margin-bottom: 20px;
-
-}
-}
 /* ---------la bande des logos à aligner-------*/
 .bande-logos {
   display: flex;
@@ -528,7 +333,6 @@ donc on supprime les versions redondantes */
     width: 60px;
     height:auto;
 }
-
 }
 
 /*--------------- footer ------------------*/

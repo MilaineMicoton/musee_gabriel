@@ -5,14 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programme 2025</title>
      <!-- cette page contient toutes les expositions temporaires -->
-      <link href="styleP2.css" rel="stylesheet">
+      <link href="Programmedesaison.css" rel="stylesheet">
 </head>
 <body>
-     <header>
-       <img src="ImagesduSite/BandeauLogoSitePreps.png" alt="header du site">
+    
+      <header>
 
-       <h2>Les expositions saisonnières</h2>
-            <nav>
+     
+    <!--   <img class="burger-icone" src="ImagesduSite/134216_menu_lines_hamburger_icon.png" alt="icone menu burger"> -->
+        <input
+        type="image"
+        id="burger-icone"
+        alt="icone burger"
+        src="ImagesduSite/134216_menu_lines_hamburger_icon.png" />
+
+        <div class="dessin-musee">
+        <img src="ImagesduSite/Musee-dessin-fond-transparent.png" alt="dessin du musée">
+        </div>
+
+    
+        <img class="logo-soleil-musee" src="ImagesduSite/musee-gabriel-header-2.png" alt="logo header du musée avec fond soleil">
+
+    <!-------menu caché (ou pas)------->
+
+    <nav>
+            <div class="pop-up-menu">
+            <ul>
+                <li><a href="Index.html">Accueil C</a></li>
+                <li>&nbsp</li>
+                <li><a href="Programmedesaison.html">Programme de la saison</a></li>
+                <li>&nbsp</li>
+                <li><a href="PourNousTrouver.html">Pour nous trouver</a></li>
+            </ul>  
+            </div>     
+    </nav>
+
+        <!--<nav>
 
                 <div class="menu-header">
                     <a href="Index.html">Accueil</a>
@@ -20,22 +48,28 @@
                     <a href="PourNousTrouver.html">Pour nous trouver</a>
                 </div>
             
-            </nav>
-        
-        </header>
+            </nav>-->
+    
+    </header>  
+    
+    <!--VOIR A LA FIN DU FICHIER POUR RETROUVER LES SECTIONS A RECOPIER ET REMPLIR
+        LORS DU CHANGEMENT D'EXPOSITIONS EN DEBUT DE SAISON -->
 
-    <main role="main">
+    <main>
+    <!-- il faudra aussi changer de bandeau horaire (photo) et les bandeaux dates (divs) -->
+        <div class="photo-bandeau-horaires">
+            <img src="ImagesduSite/BandeauHorairesReduit.png" alt="">
+        </div>
 
-        <p class="spacer20px">ESPACE 20px ici</p>
+        <h1 class="texte-saison"> Expositions...</h1>
+             <div>&nbsp</div>
 
         <section>
-            <!-- cette section contient la première exposition temporaire (2, 3 ou 4 artistes) -->
+            <!-- cette section contient la première exposition temporaire QUATRE ARTISTES) -->
 
             <!-- d'abord le bandeau des dates -->
 
-             <div class="bandeau-intercalaire">du 25 Avril au 25 mai</div>
-
-            <p class="spacer20px">ESPACE 20px ici</p>
+             <div class="bandeau-intercalaire">Du 25 Avril au 25 Mai 2025</div>
 
             <!--puis les vignettes et textes des artistes -->
 
@@ -45,29 +79,617 @@
                  <!-- ensuite les vignettes des artistes et leur nom -->
 
                 <div class="artiste-image-et-texte-vertical">
-                    <img src="ImagesduSite/hearts-9463310_640.jpg" alt="">
-                    <p>Frodo Lartiste</p>
-                    <p> Cet artiste a plein de choses intéressantes à raconter à propos de son art et bla bla bla bla etc</p>
+                    <img src="ImagesduSite/Tableau-JAlary.jpg" alt="tableau de Jacques Alary">
+                    <article>
+                    <h3>Jacques Alary</h3>
+                    <div>&nbsp;</div>
+                    <p>Jacques Alary, artiste peintre né en 1954 en france. Dans la ralisation de ses oeuvres, il laisse 
+                        tranquillement toute la place, toute la surface de la toile à l'inattendu de sa conscience et 
+                        de son inconscient.  Sa seule démarche est de se livrer à cet enchantement.
+                    </p>
+                    <h4>WWW.jacquealaryartistepeintre.com</h4>
+                    </article>
                 </div>
                 <div class="artiste-image-et-texte-vertical">
-                    <img src="ImagesduSite/circles-9451627_640.jpg" alt="">
-                    <p>Frodo Lartiste</p>
-                    <p> Cet artiste a plein de choses intéressantes à raconter à propos de son art et bla bla bla bla etc</p>
+                    <img src="ImagesduSite/Tableau-AJarridge.png" alt="tableau de Arnaud Jarrige">
+                    <article>
+                    <h3>Arja sculpteur</h3>
+                    <div>&nbsp;</div>
+                    <p>Arnaud Jarrige alias Arja, vit et travaille dans la vallée du Lot depuis 40 ans.  Il a d'abord travaillé la pierre
+                        et le marbre en sculpture animalière et portrait. Son travail, très classique, a une valeur symbolique:
+                        le temps, les guerriers. Aujourd'hui il réalise des pièces en céramique en s'inspirant de la science fiction
+                        et de notre devenir à l'ère de l'intelligence artificielle (série Cyborg).
+                    </p>
+                    </article>
                 </div>
                 <div class="artiste-image-et-texte-vertical">
-                    <img src="ImagesduSite/hex-9452616_640.jpg" alt="">
-                    <p>Frodo Lartiste</p>
-                    <p> Cet artiste a plein de choses intéressantes à raconter à propos de son art et bla bla bla bla etc</p>
+                    <img src="ImagesduSite/Tableau-Evareilhes.jpg" alt="Photographie de Eric Vareilhes">
+                    <article>
+                    <h3>Eric Vareilhes</h3>
+                    <div>&nbsp;</div>
+                    <p>Merveilleuse, fantastique, magique, mystique, la montagne constitue un lieeu de rencontres fortuites
+                        et fantasmées, de rêves et de cauchemars où l'individu se trouve en proie à ses démons intérieurs.
+                        Gravir un sommet revient à monter sur la canopée du monde, à se retrouver face à soi-même.
+                    </p>
+                    <h4>Site internet: ericvareilhes.smugmug@com</h4>
+                    </article>
+                </div>
+
+                <div class="artiste-image-et-texte-vertical no-display-vertical-4artistes">
+                    <img src="ImagesduSite/Tableau-CLampe.png" alt="Tableau de Claude lampe">
+                    <article>
+                    <h3>Claude lampe</h3>
+                    <div>&nbsp;</div>
+                    <p>De la nature du chaos, il a identifié un intérêt pour le décalage entre ce que pense l'être
+                    humain de sa place dans le monde et de la réalité du vivant auquel il appartient.
+                    Ses peintures abstraites construites aux couleurs plaines, nous entraînent dans notre propre
+                    chaos d'oû surgissent toutes les évolutions.
+                    </p>
+                    <h4>www.claude-lampe.com</h4>
+                    </article>
+                </div>
+            </div>
+                
+
+            <div class="artiste-image-et-texte-horizontal no-display-horizontal-4artistes">
+                    <img src="ImagesduSite/Tableau-CLampe.png" alt="tableau de Claude Lampe">
+                    <article>
+                    <h3>Claude Lampe</h3>
+                    <div>&nbsp;</div>
+                    <p> De la nature du chaos, il a identifié un intérêt pour le décalage entre ce que pense l'être
+                    humain de sa place dans le monde et de la réalité du vivant auquel il appartient.
+                    Ses peintures abstraites construites aux couleurs plaines, nous entraînent dans notre propre
+                    chaos d'oû surgissent toutes les évolutions.</p>
+                        <h4>www.claude-lampe.com</h4>
+                    </article>
+                    <img src="ImagesduSite/Logo_Musee.png" alt="logo du musée Gabriel">
+            </div>
+
+        </section>
+
+        <section>
+            <!-- cette section contient l'exposition temporaire suivante: TROIS ARTISTES -->
+
+            <!-- d'abord le bandeau des dates -->
+
+             <div class="bandeau-intercalaire">Du 30 Mai au 29 Juin 2025</div>
+
+            <!--puis les vignettes et textes des artistes -->
+
+            <!-- d'abord le conteneur flex -->
+            <div class="container-vignettes-artistes">
+
+                 <!-- ensuite les vignettes des artistes et leur nom -->
+
+                <div class="artiste-image-et-texte-vertical">
+                    <img src="ImagesduSite/Tableau-LBourgeois.JPG" alt="oeuvre de Laurence Bourgeois">
+                    <article>
+                    <h3>Lô/Laurence Bourgeois</h3>
+                    <div>&nbsp;</div>
+                    <p> arpente les chemins, attentive à la voix de la terre... De retour à l'atelier
+                        poète et artiste du verre, elle allie mots et matières, la transparence
+                        est son médium. Elle crée une oeuvre singulière, alchimique où dialoguent
+                        écriture, encre et fulgurance.
+                    </p>
+                        <h4>www.livedeverre.fr</h4>
+                    </article>
                 </div>
                 <div class="artiste-image-et-texte-vertical">
-                    <img src="ImagesduSite/wave-9453429_640.jpg" alt="">
-                    <p>Frodo Lartiste</p>
-                    <p> Cet artiste a plein de choses intéressantes à raconter à propos de son art et bla bla bla bla etc</p>
+                    <img src="ImagesduSite/Tableau-HDubois.JPG" alt="tableau de Henri Dubois alias HETA">
+                    <article>
+                    <h3>HETA</h3>
+                    <div>&nbsp;</div>
+                    <p>s'inscrit dans une recherche sur la perception de la réalité dans des notions de temps
+                        et d'espace. Il fait vibrer la matière et crée des chemins de forme et de ligne pures 
+                        diffractées à l'infini. Les personnages minuscules introduits dans la série des
+                        "solitaires improbables" nous confrontent dans un jeu d'échelle poétique et humoristique
+                        à l'immensité de ce monde en mouvement et en pleine mutation.
+                    </p>
+                    </article>
+                </div>
+                <div class="artiste-image-et-texte-vertical no-display-vertical-3artistes">
+                    <img src="ImagesduSite/Tableau-EMarin.png" alt="tableau de E. Marin alias Cotcot Art">
+                    <article>
+                    <h3>CotCotArt</h3>
+                    <div>&nbsp;</div>
+                    <p> nous propose une série de tableaux et sculptures en béton: empreintes, moulages
+                        incrustations de matières... Elle se décline en fragments de paysages, en instants de l'enfance,
+                        en vastes horizons ou en corps en mouvements. Une oeuvre poétique où l'éphémère
+                        est confronté à l'immortalité de la masse inerte du béton et interpelle l'observateur
+                        sur la beauté et la fragilité du monde.
+                    </p>
+                        <h4>www.cotcot-art.fr</h4>
+                    </article>
+                </div>
+                
+            </div>
+
+            <div class="artiste-image-et-texte-horizontal no-display-horizontal-3artistes">
+                    <img src="ImagesduSite/Tableau-EMarin.png" alt="tableau de E. Marin alias Cotcot Art">
+                    <article>
+                    <h3>CotCot Art</h3>
+                    <div>&nbsp;</div>
+                    <p> nous propose une série de tableaux et sculptures en béton: empreintes, moulages
+                        incrustations de matières... Elle se décline en fragments de paysages, en instants de l'enfance,
+                        en vastes horizons ou en corps en mouvements. Une oeuvre poétique où l'éphémère
+                        est confronté à l'immortalité de la masse inerte du béton et interpelle l'observateur
+                        sur la beauté et la fragilité du monde.</p>
+                        <h4>www.cotcot-art.fr</h4>
+                    </article>
+            </div>
+
+
+        </section>
+
+        <section>
+            <!-- cette section contient l'exposition temporaire suivante: TROIS ARTISTES -->
+
+            <!-- d'abord le bandeau des dates -->
+
+             <div class="bandeau-intercalaire">Du 4 Juillet au 3 Août 2025</div>
+
+            <!--puis les vignettes et textes des artistes -->
+
+            <!-- d'abord le conteneur flex -->
+            <div class="container-vignettes-artistes">
+
+                 <!-- ensuite les vignettes des artistes et leur nom -->
+
+                <div class="artiste-image-et-texte-vertical">
+                    <img src="ImagesduSite/Tableau-Mine.png" alt="tableau de Mine">
+                    <article>
+                    <h3>Mine</h3>
+                    <div>&nbsp;</div>
+                    <p> Mine nous parle avec ses yeux d'embruns.  Les larmes sont salées du fruit des paludiers, 
+                        mais le regard est clair et l'intention limpide. Ses récoltes nourrissent notre appétit de rêves. 
+                        Il nous montre ses mondes aux limites du nôtre. (texte par R.Sculler)</p>
+                        <h4>Facebook : Jean-Pierre Richard (Mine)</h4>
+                    </article>
+                </div>
+                <div class="artiste-image-et-texte-vertical">
+                    <img src="ImagesduSite/Tableau-LauriaCelik.png" alt="tableau de Lauria Célik">
+                    <article>
+                    <h3>Lauria Célik</h3>
+                    <div>&nbsp;</div>
+                    <p>a un rapport au corps naturel et léger. Elle cherche des égéries, joue avec les courbes, les couleurs et 
+                        la densité de la lumières afin de créer un équilibre qui rend hommage à la vie et à l'imagination. 
+                        Que ce soit dans des oeuvres expressives ou dans des scènes plus intimistes qui invitent à la rêverie et
+                         à la poésie, elle transmet ses émotions et états d'âme.</p>
+                    </article>
+                </div>
+                <div class="artiste-image-et-texte-vertical no-display-vertical-3artistes">
+                    <img src="ImagesduSite/Tableau-FMangiarotti.png" alt="tableau de F. Mangiarotti">
+                    <article>
+                    <h3>Frédérique Mangiarotti</h3>
+                    <div>&nbsp;</div>
+                    <p> vous invite au voyage dans son univers oniriqe: paysages incandescents, éruptions volcaniques, 
+                        éclairs déchirant la toile, comme autant d'images émergentes, semblent sorties d'un rêve. 
+                        Son processus créatif la conduit à renouveler constamment ses sujets, reflets de son imagination
+                        sans limite. Voyageuse dans l'âme, son parcours est sur</p>
+                        <h4>Instagram @fred_m-peindre</h4>
+                    </article>
+                </div>
+                
+            </div>
+
+            <div class="artiste-image-et-texte-horizontal no-display-horizontal-3artistes">
+                    <img src="ImagesduSite/Tableau-FMangiarotti.png" alt="tableau de F.Mangiarotti">
+                    <article>
+                    <h3>Frédérique Mangiarotti</h3>
+                    <div>&nbsp;</div>
+                    <p> vous invite au voyage dans son univers oniriqe: paysages incandescents, éruptions volcaniques, 
+                        éclairs déchirant la toile, comme autant d'images émergentes, semblent sorties d'un rêve. 
+                        Son processus créatif la conduit à renouveler constamment ses sujets, reflets de son imagination
+                        sans limite. Voyageuse dans l'âme, son parcours est</p>
+                        <h4>sur Instagram @fred_m-peindre</h4>
+                    </article>
+            </div>
+
+
+        </section>
+
+
+        <section>
+            <!-- cette section contient l'exposition temporaire suivante TROIS ARTISTES -->
+
+            <div class="bandeau-intercalaire">Du 8 Août au 07 Septembre</div>
+
+            <!--les vignettes et textes des artistes -->
+
+            <!-- d'abord le conteneur flex -->
+            <div class="container-vignettes-artistes">
+
+                 <!-- ensuite les vignettes des artistes et leur nom -->
+
+                <div class="artiste-image-et-texte-vertical">
+                    <img src="ImagesduSite/Tableau-JAlary.jpg" alt="tableau de J. Alary">
+                    <article>
+                    <h3>Jacque Alary</h3>
+                    <div>&nbsp;</div>
+                    <p>Au désordre des choses, Jacques Rival oppose la force de son imaginaire. Créateur d'une langue nouvelle,
+                        inventeur d'un alphabet, d'une typographie et d'une topographie propres, il arpente le territoire de la vie
+                        et le réorganise à sa main. Violente parfois, souvent ironique, sa peinture sait aussi se faire tendre.
+                        (texte par Michel Trégaro, journaliste).  
+                    </p>
+                    <h4>WWW.flacartistes.com</h4>
+                    </article>
+                </div>
+
+                <div class="artiste-image-et-texte-vertical">
+                    <img src="ImagesduSite/Tableau-MiekeVDHende.png" alt="Oeuvre de Mieke Van Den Hende">
+                    <article>
+                    <h3>Mieke Van Den Hende</h3>
+                    <p>Artiste néerlando-belge, elle explore les possibilités poétiques des matériaux du quotidien, humbles 
+                        par essence, car ils n'ont nul désir d'être érigés en art. Ce paradoxe la fascine. Créer de 
+                    l'art à partir de rien "l'art de rien". En ce moment elle travaille avec du scotch et des graines.</p>
+                    <h4>www.miekevandenhende.com </h4>
+                    </article>
+                </div>
+
+                <div class="artiste-image-et-texte-vertical no-display-vertical-3artistes">
+                    <img src="ImagesduSite/Tableau-ProjetLuca.png" alt="Oeuvre de Mieke Van Den Hende">
+                    <article>
+                    <h3>Projet Luca - Atelier créatif</h3>
+                    <p>Samedi 23 et dimanche 24 Août, 10h à 13h</p>
+                    <h4>Création participative d'une sculpture entièrement végétale</h4>
+                    <p>Mieke vous invite à un moment de création partagée. Vous réaliserez avec elle une oeuvre
+                        à l'aide de graines de Setiria Verticillata ou sétaire verticillée, dont les graines se 
+                        collent entre elles et permettent qu'on les sculpte aisément.
+                        Nous vous invitons à vous inscrire dès à présent pour cet atelier qui se déroulera dans la grande 
+                        salle de la verrière. Contribution libre.
+                    </p>
+                    </article>
                 </div>
             </div>
 
-            <p class="spacer20px">ESPACE 20px ici</p>
+            <div class="artiste-image-et-texte-horizontal no-display-horizontal-3artistes">
+                    <img src="ImagesduSite/Tableau-ProjetLuca.png" alt="Photo par Mieke Van Den Hende">
+                    <article>
+                    <h3>Projet Luca - Atelier créatif </h3>
+                    <h4>Création participative d'une sculpture entièrement végétale</h4>
+                    <p>Samedi 23 et dimanche 24 Août, 10h à 13h</p>
+                    <p>Mieke vous invite à un moment de création partagée. Vous réaliserez avec elle une oeuvre
+                        à l'aide de graines de Setiria Verticillata ou sétaire verticillée, dont les graines se 
+                        collent entre elles et permettent qu'on les sculpte aisément.
+                        Nous vous invitons à vous inscrire dès à présent pour cet atelier qui se déroulera dans la grande 
+                        salle de la verrière. Contribution libre.
+                    </p>
+                    </article>
+            </div>
+
         </section>
+
+        <section>
+            <!-- cette section contient l'exposition temporaire suivante TROIS ARTISTES) -->
+
+            <div class="bandeau-intercalaire">Du 12 Septembre au 12 octobre</div>
+
+            <!--les vignettes et textes des artistes -->
+
+            <!-- d'abord le conteneur flex -->
+            <div class="container-vignettes-artistes">
+
+                 <!-- ensuite les vignettes des artistes et leur nom -->
+           
+                <div class="artiste-image-et-texte-vertical">
+                    <img src="ImagesduSite/Tableau-JNCrepin.png" alt="Oeuvre de Jean-Noel Crépin">
+                    <article>
+                    <h3>Jean-Noël Crépin</h3>
+                    <div>&nbsp;</div>
+                    <p> Le sujet de son travail est de tenter de montrer ce qui est et ce qui sera. En associant
+                        une multitude de matériaux, Jean-Noël explore l'espace, la surface, la matière, la nature,
+                        la réalité des choses avec brio, leur apparence et leur finitude. Contre la disparition de 
+                        toute chose, il s'obstine à en garder une trace.</p>
+                    <h4>www.jncpeinturesculptures.jimdo.com</h4>
+                    </article>
+                </div>
+
+                <div class="artiste-image-et-texte-vertical">
+                    <img src="ImagesduSite/Tableau-LBeranger.jpg" alt="Tableau de Lucille Béranger">
+                    <article>
+                    <h3>Lucile Béranger</h3>
+                    <div>&nbsp;</div>
+                    <p>Elle collectionne les photos anciennes qu'elle trouve dans les brocantes du
+                        Sud Ouest. Les visages et les décors l'inspirent dans sa pratique artistique.
+                    Un jour, elle décide d'ajouter de la couleur à ces images. Ainsi, elle rajoute un peu de vie.
+                    Elle réinvente une histoire, rends aux personnages qu'elle dessine une certaine identité.
+                    </p>
+                    </article>
+                </div>
+
+                <div class="artiste-image-et-texte-vertical no-display-vertical-3artistes">
+                    <img src="ImagesduSite/Tableau-OCharbonnel.png" alt="Dessin de Olivier Charbonnel">
+                    <article>
+                    <h3>Olivier Charbonnel</h3>
+                    <div>&nbsp;</div>
+                    <p>Artiste autodidacte, de la peinture au dessin, ses émotions personnelles, un regard qui lui parle
+                        avec une dimension poétique.Il dessine ce qu'il ressent en toute liberté. Son style navigue entre
+                        le réalisme et l'abstrait, l'intimité et l'imaginaire. Toujours avec délicatesse et douceur par 
+                        l'utilisation du style à bille ou de la bombe aérosol.</p>
+                        <h4>www.oliviercharbonnel-arts.com</h4>
+                    </article>
+                </div>
+            </div>
+            <div class="artiste-image-et-texte-horizontal no-display-horizontal-3artistes">
+                    <img src="ImagesduSite/Tableau-OCharbonnel.png" alt="Dessin de Olivier Charbonnel">
+                    <article>
+                    <h3>Olivier Charbonnel</h3>
+                    <div>&nbsp;</div>
+                    <p> vous invite au voyage dans son univers oniriqe: paysages incandescents, éruptions volcaniques, 
+                        éclairs déchirant la toile, comme autant d'images émergentes, semblent sorties d'un rêve. 
+                        Son processus créatif la conduit à renouveler constamment ses sujets, reflets de son imagination
+                        sans limite. Voyageuse dans l'âme, son parcours est</p>
+                        <h4>sur Instagram @fred_m-peindre</h4>
+                    </article>
+            </div>
+
+        </section>
+
+        <section>
+            <!--------- bande des logos------------>
+
+            <div class="bande-logos">
+                <div class="logo-latronquiere">
+                    <img src="ImagesduSite/Logo_Latronquiere.png" alt="logo Latronquière">
+                </div>
+                <div class="logos-empiles">
+                <div class="logo">
+                    <img src="ImagesduSite/Logo_Credit_Agricole.png" alt="logo Crédit Agricole">
+                </div>
+                <div>&nbsp;</div>
+                <div class="logo">
+                    <img src="ImagesduSite/logo-fdva-40580.png" alt="logo FDV2A">
+                </div>
+                </div>
+                <div class="logo">
+                    <img src="ImagesduSite/Logo_monument_historique_-_rouge.png" alt="logo Monument Historique">
+                </div>
+            </div>
+        </section>
+        <div>&nbsp;</div>
     </main>
+     <footer>
+        <div class="monFooter">
+        <nav>
+            
+            <div class="menu-footer">
+
+              
+
+                <a href="Index.html">Accueil</a>
+                <a href="Programmedesaison.html">Programme</a>
+                <a href="PourNousTrouver.html">Nous trouver</a>
+            </div>
+                
+        </nav>
+        </div>
+    </footer>
 </body>
 </html>
+
+<!-- SECTION A RECOPIER ET MODIFIER POUR LES CHANGEMENTS D'EXPOSITION -->
+ <!--           POUR QUATRE ARTISTES 
+ <section>
+             cette section contient la première exposition temporaire QUATRE ARTISTES) -->
+
+            <!-- d'abord le bandeau des dates 
+
+             <div class="bandeau-intercalaire">Du 25 Avril au 25 Mai 2025</div>
+
+            puis les vignettes et textes des artistes -->
+
+            <!-- d'abord le conteneur flex 
+            <div class="container-vignettes-artistes">
+
+                  ensuite les vignettes des artistes et leur nom -->
+<!--
+                <div class="artiste-image-et-texte-vertical">
+                    <img src="ImagesduSite/Tableau-JAlary.jpg" alt="tableau de Jacques Alary">
+                    <article>
+                    <h3>Jacques Alary</h3>
+                    <div>&nbsp;</div>
+                    <p>Jacques Alary, artiste peintre né en 1954 en france. Dans la ralisation de ses oeuvres, il laisse 
+                        tranquillement toute la place, toute la surface de la toile à l'inattendu de sa conscience et 
+                        de son inconscient.  Sa seule démarche est de se livrer à cet enchantement.
+                    </p>
+                    <h4>WWW.jacquealaryartistepeintre.com</h4>
+                    </article>
+                </div>
+                <div class="artiste-image-et-texte-vertical">
+                    <img src="ImagesduSite/Tableau-AJarridge.png" alt="tableau de Arnaud Jarrige">
+                    <article>
+                    <h3>Arja sculpteur</h3>
+                    <div>&nbsp;</div>
+                    <p>Arnaud Jarrige alias Arja, vit et travaille dans la vallée du Lot depuis 40 ans.  Il a d'abord travaillé la pierre
+                        et le marbre en sculpture animalière et portrait. Son travail, très classique, a une valeur symbolique:
+                        le temps, les guerriers. Aujourd'hui il réalise des pièces en céramique en s'inspirant de la science fiction
+                        et de notre devenir à l'ère de l'intelligence artificielle (série Cyborg).
+                    </p>
+                    </article>
+                </div>
+                <div class="artiste-image-et-texte-vertical">
+                    <img src="ImagesduSite/Tableau-Evareilhes.jpg" alt="Photographie de Eric Vareilhes">
+                    <article>
+                    <h3>Eric Vareilhes</h3>
+                    <div>&nbsp;</div>
+                    <p>Merveilleuse, fantastique, magique, mystique, la montagne constitue un lieeu de rencontres fortuites
+                        et fantasmées, de rêves et de cauchemars où l'individu se trouve en proie à ses démons intérieurs.
+                        Gravir un sommet revient à monter sur la canopée du monde, à se retrouver face à soi-même.
+                    </p>
+                    <h4>Site internet: ericvareilhes.smugmug@com</h4>
+                    </article>
+                </div>
+
+                <div class="artiste-image-et-texte-vertical no-display-vertical-4artistes">
+                    <img src="ImagesduSite/Tableau-CLampe.png" alt="Tableau de Claude lampe">
+                    <article>
+                    <h3>Claude lampe</h3>
+                    <div>&nbsp;</div>
+                    <p>De la nature du chaos, il a identifié un intérêt pour le décalage entre ce que pense l'être
+                    humain de sa place dans le monde et de la réalité du vivant auquel il appartient.
+                    Ses peintures abstraites construites aux couleurs plaines, nous entraînent dans notre propre
+                    chaos d'oû surgissent toutes les évolutions.
+                    </p>
+                    <h4>www.claude-lampe.com</h4>
+                    </article>
+                </div>
+            </div>
+                
+
+            <div class="artiste-image-et-texte-horizontal no-display-horizontal-4artistes">
+                    <img src="ImagesduSite/Tableau-CLampe.png" alt="tableau de Claude Lampe">
+                    <article>
+                    <h3>Claude Lampe</h3>
+                    <div>&nbsp;</div>
+                    <p> De la nature du chaos, il a identifié un intérêt pour le décalage entre ce que pense l'être
+                    humain de sa place dans le monde et de la réalité du vivant auquel il appartient.
+                    Ses peintures abstraites construites aux couleurs plaines, nous entraînent dans notre propre
+                    chaos d'oû surgissent toutes les évolutions.</p>
+                        <h4>www.claude-lampe.com</h4>
+                    </article>
+                    <img src="ImagesduSite/Logo_Musee.png" alt="logo du musée Gabriel">
+            </div>
+
+        </section>
+    
+     SECTION A RECOPIER ET MODIFIER POUR LES CHANGEMENTS D'EXPOSITION -->
+     <!--           POUR TROIS ARTISTES 
+        <section>
+            cette section contient l'exposition temporaire suivante: TROIS ARTISTES -->
+
+            <!-- d'abord le bandeau des dates -
+
+             <div class="bandeau-intercalaire">Du 4 Juillet au 3 Août 2025</div>
+
+            puis les vignettes et textes des artistes -->
+
+            <!-- d'abord le conteneur flex 
+            <div class="container-vignettes-artistes">
+
+                 ensuite les vignettes des artistes et leur nom -
+
+                <div class="artiste-image-et-texte-vertical">
+                    <img src="ImagesduSite/Tableau-Mine.png" alt="tableau de Mine">
+                    <article>
+                    <h3>Mine</h3>
+                    <div>&nbsp;</div>
+                    <p> Mine nous parle avec ses yeux d'embruns.  Les larmes sont salées du fruit des paludiers, 
+                        mais le regard est clair et l'intention limpide. Ses récoltes nourrissent notre appétit de rêves. 
+                        Il nous montre ses mondes aux limites du nôtre. (texte par R.Sculler)</p>
+                        <h4>Facebook : Jean-Pierre Richard (Mine)</h4>
+                    </article>
+                </div>
+                <div class="artiste-image-et-texte-vertical">
+                    <img src="ImagesduSite/Tableau-LauriaCelik.png" alt="tableau de Lauria Célik">
+                    <article>
+                    <h3>Lauria Célik</h3>
+                    <div>&nbsp;</div>
+                    <p>a un rapport au corps naturel et léger. Elle cherche des égéries, joue avec les courbes, les couleurs et 
+                        la densité de la lumières afin de créer un équilibre qui rend hommage à la vie et à l'imagination. 
+                        Que ce soit dans des oeuvres expressives ou dans des scènes plus intimistes qui invitent à la rêverie et
+                         à la poésie, elle transmet ses émotions et états d'âme.</p>
+                    </article>
+                </div>
+                <div class="artiste-image-et-texte-vertical no-display-vertical-3artistes">
+                    <img src="ImagesduSite/Tableau-FMangiarotti.png" alt="tableau de F. Mangiarotti">
+                    <article>
+                    <h3>Frédérique Mangiarotti</h3>
+                    <div>&nbsp;</div>
+                    <p> vous invite au voyage dans son univers oniriqe: paysages incandescents, éruptions volcaniques, 
+                        éclairs déchirant la toile, comme autant d'images émergentes, semblent sorties d'un rêve. 
+                        Son processus créatif la conduit à renouveler constamment ses sujets, reflets de son imagination
+                        sans limite. Voyageuse dans l'âme, son parcours est sur</p>
+                        <h4>Instagram @fred_m-peindre</h4>
+                    </article>
+                </div>
+                
+            </div>
+
+            <div class="artiste-image-et-texte-horizontal no-display-horizontal-3artistes">
+                    <img src="ImagesduSite/Tableau-FMangiarotti.png" alt="tableau de F.Mangiarotti">
+                    <article>
+                    <h3>Frédérique Mangiarotti</h3>
+                    <div>&nbsp;</div>
+                    <p> vous invite au voyage dans son univers oniriqe: paysages incandescents, éruptions volcaniques, 
+                        éclairs déchirant la toile, comme autant d'images émergentes, semblent sorties d'un rêve. 
+                        Son processus créatif la conduit à renouveler constamment ses sujets, reflets de son imagination
+                        sans limite. Voyageuse dans l'âme, son parcours est</p>
+                        <h4>sur Instagram @fred_m-peindre</h4>
+                    </article>
+            </div>
+
+
+        </section>
+    -->
+<!-- SECTION A RECOPIER ET MODIFIER POUR LES CHANGEMENTS D'EXPOSITION -->
+     <!--           POUR TROIS ARTISTES 
+        <section>
+            cette section contient l'exposition temporaire suivante TROIS ARTISTES
+
+            <div class="bandeau-intercalaire">Du 8 Août au 07 Septembre</div>
+
+            les vignettes et textes des artistes -->
+
+            <!-- d'abord le conteneur flex 
+            <div class="container-vignettes-artistes">
+
+                 ensuite les vignettes des artistes et leur nom 
+
+                <div class="artiste-image-et-texte-vertical">
+                    <img src="ImagesduSite/Tableau-JAlary.jpg" alt="tableau de J. Alary">
+                    <article>
+                    <h3>Jacque Alary</h3>
+                    <div>&nbsp;</div>
+                    <p>Au désordre des choses, Jacques Rival oppose la force de son imaginaire. Créateur d'une langue nouvelle,
+                        inventeur d'un alphabet, d'une typographie et d'une topographie propres, il arpente le territoire de la vie
+                        et le réorganise à sa main. Violente parfois, souvent ironique, sa peinture sait aussi se faire tendre.
+                        (texte par Michel Trégaro, journaliste).  
+                    </p>
+                    <h4>WWW.flacartistes.com</h4>
+                    </article>
+                </div>
+
+                <div class="artiste-image-et-texte-vertical">
+                    <img src="ImagesduSite/Tableau-MiekeVDHende.png" alt="Oeuvre de Mieke Van Den Hende">
+                    <article>
+                    <h3>Mieke Van Den Hende</h3>
+                    <p>Artiste néerlando-belge, elle explore les possibilités poétiques des matériaux du quotidien, humbles 
+                        par essence, car ils n'ont nul désir d'être érigés en art. Ce paradoxe la fascine. Créer de 
+                    l'art à partir de rien "l'art de rien". En ce moment elle travaille avec du scotch et des graines.</p>
+                    <h4>www.miekevandenhende.com </h4>
+                    </article>
+                </div>
+
+                <div class="artiste-image-et-texte-vertical no-display-vertical-3artistes">
+                    <img src="ImagesduSite/Tableau-ProjetLuca.png" alt="Oeuvre de Mieke Van Den Hende">
+                    <article>
+                    <h3>Projet Luca - Atelier créatif</h3>
+                    <p>Samedi 23 et dimanche 24 Août, 10h à 13h</p>
+                    <h4>Création participative d'une sculpture entièrement végétale</h4>
+                    <p>Mieke vous invite à un moment de création partagée. Vous réaliserez avec elle une oeuvre
+                        à l'aide de graines de Setiria Verticillata ou sétaire verticillée, dont les graines se 
+                        collent entre elles et permettent qu'on les sculpte aisément.
+                        Nous vous invitons à vous inscrire dès à présent pour cet atelier qui se déroulera dans la grande 
+                        salle de la verrière. Contribution libre.
+                    </p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="artiste-image-et-texte-horizontal no-display-horizontal-3artistes">
+                    <img src="ImagesduSite/Tableau-ProjetLuca.png" alt="Photo par Mieke Van Den Hende">
+                    <article>
+                    <h3>Projet Luca - Atelier créatif </h3>
+                    <h4>Création participative d'une sculpture entièrement végétale</h4>
+                    <p>Samedi 23 et dimanche 24 Août, 10h à 13h</p>
+                    <p>Mieke vous invite à un moment de création partagée. Vous réaliserez avec elle une oeuvre
+                        à l'aide de graines de Setiria Verticillata ou sétaire verticillée, dont les graines se 
+                        collent entre elles et permettent qu'on les sculpte aisément.
+                        Nous vous invitons à vous inscrire dès à présent pour cet atelier qui se déroulera dans la grande 
+                        salle de la verrière. Contribution libre.
+                    </p>
+                    </article>
+            </div>
+
+        </section>
+    -->

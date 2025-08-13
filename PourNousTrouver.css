@@ -1,0 +1,279 @@
+/*
+/* Reset */  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    background-color:#f0ece2;
+}
+
+@font-face {
+    font-family: "ardoise";
+    src:
+        url("/font-family-ardoise/fonts/fonnts.com-Ardoise_Std.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "myriad-pro";
+    src:
+        url("/font-family-myriad-pro/MYRIADPRO-REGULAR.OTF") format("opentype");
+}
+
+
+/* General styles  and typographie pour les écrans tablettes et pc */
+
+
+h1 {
+    text-align: center;
+}
+h1, h3 {
+    font-family: ardoise, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+a, h3 {
+    font-family: ardoise, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+h4 {
+    font-family: ardoise, sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+    color: red;
+    
+}
+
+p {
+    font-family: myriad-pro;
+    font-size: 1em;
+    text-align: center;
+}
+
+article > p {
+    text-align: left;
+    hyphens: auto;
+}
+/* ---------------taille des polices pour les tablettes --------*/
+
+@media screen and (width <=769px) {
+    h1{
+    font-size:  1.5em;
+    margin-left: 15%;
+    text-align: left;
+    }
+    
+}
+/* ---------------taille des polices pour les portables -------- */
+
+@media screen and (width <= 426px){
+    
+    h1 {
+        text-align: center;
+        text-wrap: nowrap;
+        margin:0;
+        font-family: ardoise, sans-serif;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+    
+    h2 {
+    font-family: ardoise, sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    }
+    a, h3 {
+    font-family: ardoise, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    }
+
+    p {
+    font-family: myriad-pro;
+    font-size: 1em;
+    text-align: center;
+    }
+    
+}
+
+
+/*-------------------le header------------------- */
+
+header {
+    padding: 0px;
+    max-width: 100vw;
+
+    align-items: center;
+    box-sizing: border-box;
+    position:sticky;
+    top: 0;
+    }
+
+        
+.logo-soleil-musee {
+    width: 100%;
+    height: 100%;
+} 
+
+#burger-icone {
+    width:40px;
+    height:40px;
+    position: absolute;
+    top:20px;
+    right:20px;
+}
+/* -------dessin musée manipulations ici----- */
+
+
+@media (min-width:768px) {
+.dessin-musee {
+    width: 220px;
+    height:auto;
+    position:absolute;
+    top:55px;
+    right:10px;
+}
+.dessin-musee > img {
+    width:100%;
+}
+}
+
+@media (min-width:1024px) {
+.dessin-musee {
+    width: 300px;
+    height:auto;
+    position:absolute;
+    top: 65px;
+    right:0px;
+}
+.dessin-musee > img {
+    width:100%;
+}
+}
+
+@media (max-width:767px) {
+    .dessin-musee {
+    display: none;
+}
+    .dessin-musee > img {
+    display:none;
+    }
+}
+/* ---------------------boite cachée (ou pas) du menu----------------- */
+
+/* alignement du menu à droite */
+header > nav {
+  display: flex;
+  justify-content: end;
+}
+/* créer la boîte du menu */
+li {
+  background-color: #004160;
+  list-style: none;
+}
+/* style du texte des liens */
+header a{
+    background-color: #004160;
+    color: white;
+    text-decoration: none;
+}
+/* style de la boite (cachée ou pas) contenant les liens */
+.pop-up-menu {
+  background-color: #004160;;
+  border: solid;
+  border-color: #004160;
+  padding: 10px;
+  position:absolute;
+  /*top:0;
+  /*right:0;*/
+  top: -9999px;
+  right: -9999px;
+}
+
+/* main */
+
+main {
+    margin-top: 0;
+    padding: 0;
+    max-width: 100vw;
+    height: auto;
+    box-sizing: border-box;
+}
+
+
+
+/*  à partir de là c différent****/
+
+
+
+.photo-carte {
+    max-width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.photo-carte > img {
+    width: 100%;
+    
+}
+
+/* ---------la bande des logos à aligner-------*/
+.bande-logos {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap:nowrap;
+  max-width:100%;
+}
+
+.logo > img {
+    width:110px;
+    height:auto;
+}
+.logo-latronquiere > img {
+    width:60px;
+}
+@media(max-width:760px){
+    .logo > img {
+    width: 60px;
+    height:auto;
+}
+}
+
+/*--------------- footer ------------------*/
+
+
+/* largeur et hauteur */
+
+.monFooter {
+    padding: 30px 10px 30px 10px;
+    max-width: 100vw;
+    height: 10vh;
+    align-items: center;
+    background-color: #ffcf53;
+}
+
+/* rendre le conteneur flex */
+
+.menu-footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffcf53;
+}
+
+/* finition */
+
+.menu-footer a {
+    display: inline;
+    background-color: #ffcf53;
+    font-size: large;
+    border-color: #ffcf53;
+    color:#560404;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
