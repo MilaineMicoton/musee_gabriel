@@ -10,15 +10,13 @@
 <body>
     
       <header>
-
      
-    <!--   <img class="burger-icone" src="ImagesduSite/134216_menu_lines_hamburger_icon.png" alt="icone menu burger"> -->
-        <input
-        type="image"
-        id="burger-icone"
-        alt="icone burger"
-        src="ImagesduSite/134216_menu_lines_hamburger_icon.png" />
+    <!--button toggle popover menu -->
+ 
+        <button id="burger-icone"  popovertarget="pop-up-menu"  popovertargetaction="show" >≡</button>
 
+    <!-- logos et photos du header-->
+        
         <div class="dessin-musee">
         <img src="ImagesduSite/Musee-dessin-fond-transparent.png" alt="dessin du musée">
         </div>
@@ -29,7 +27,7 @@
     <!-------menu caché (ou pas)------->
 
     <nav>
-            <div class="pop-up-menu">
+            <div id ="pop-up-menu" popover>
             <ul>
                 <li><a href="Index.html">Accueil C</a></li>
                 <li>&nbsp</li>
@@ -40,15 +38,7 @@
             </div>     
     </nav>
 
-        <!--<nav>
-
-                <div class="menu-header">
-                    <a href="Index.html">Accueil</a>
-                    <a href="Programmedesaison.html">Programme de la saison</a>
-                    <a href="PourNousTrouver.html">Pour nous trouver</a>
-                </div>
-            
-            </nav>-->
+        
     
     </header>  
     
@@ -302,9 +292,9 @@
                  <!-- ensuite les vignettes des artistes et leur nom -->
 
                 <div class="artiste-image-et-texte-vertical">
-                    <img src="ImagesduSite/Tableau-JAlary.jpg" alt="tableau de J. Alary">
+                    <img src="ImagesduSite/Tableau-JRival.png" alt="tableau de J. Rival">
                     <article>
-                    <h3>Jacque Alary</h3>
+                    <h3>Jacques Rival</h3>
                     <div>&nbsp;</div>
                     <p>Au désordre des choses, Jacques Rival oppose la force de son imaginaire. Créateur d'une langue nouvelle,
                         inventeur d'un alphabet, d'une typographie et d'une topographie propres, il arpente le territoire de la vie
@@ -432,15 +422,19 @@
                 <div class="logo-latronquiere">
                     <img src="ImagesduSite/Logo_Latronquiere.png" alt="logo Latronquière">
                 </div>
+
                 <div class="logos-empiles">
-                <div class="logo">
-                    <img src="ImagesduSite/Logo_Credit_Agricole.png" alt="logo Crédit Agricole">
-                </div>
-                <div>&nbsp;</div>
+                               
                 <div class="logo">
                     <img src="ImagesduSite/logo-fdva-40580.png" alt="logo FDV2A">
                 </div>
+                 <div>&nbsp;</div>
+                <div class="logo">
+                    <img src="ImagesduSite/Logo_Credit_Agricole.png" alt="logo Crédit Agricole">
                 </div>
+
+                </div>
+                
                 <div class="logo">
                     <img src="ImagesduSite/Logo_monument_historique_-_rouge.png" alt="logo Monument Historique">
                 </div>

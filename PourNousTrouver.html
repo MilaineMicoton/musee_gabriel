@@ -10,14 +10,11 @@
 <body>
     
     <header>
+    <!--button toggle popover menu -->
+ 
+        <button id="burger-icone"  popovertarget="pop-up-menu"  popovertargetaction="show" >≡</button>
 
-     
-    <!--   <img class="burger-icone" src="ImagesduSite/134216_menu_lines_hamburger_icon.png" alt="icone menu burger"> -->
-        <input
-        type="image"
-        id="burger-icone"
-        alt="icone burger"
-        src="ImagesduSite/134216_menu_lines_hamburger_icon.png" />
+    <!-- logos et photos du header-->
 
         <div class="dessin-musee">
         <img src="ImagesduSite/Musee-dessin-fond-transparent.png" alt="dessin du musée">
@@ -28,7 +25,7 @@
     <!-------menu caché (ou pas)------->
 
     <nav>
-            <div class="pop-up-menu">
+            <div id ="pop-up-menu" popover>
             <ul>
                 <li><a href="Index.html">Accueil C</a></li>
                 <li>&nbsp</li>
@@ -39,20 +36,13 @@
             </div>     
         </nav>
 
-        <!--<nav>
-
-                <div class="menu-header">
-                    <a href="Index.html">Accueil</a>
-                    <a href="Programmedesaison.html">Programme de la saison</a>
-                    <a href="PourNousTrouver.html">Pour nous trouver</a>
-                </div>
-            
-            </nav>-->
+        
     
     </header>  
 
 <main>
-
+    <section>
+   
     <h1 class="texte-trouver"> Comment nous trouver...</h1>
                 <div>&nbsp</div>
 
@@ -84,6 +74,9 @@
             </div>
         </div>
 
+        </section>
+
+
         <section>
             <!--------- bande des logos------------>
 
@@ -91,20 +84,23 @@
                 <div class="logo-latronquiere">
                     <img src="ImagesduSite/Logo_Latronquiere.png" alt="logo Latronquière">
                 </div>
+
                 <div class="logos-empiles">
-                <div class="logo">
-                    <img src="ImagesduSite/Logo_Credit_Agricole.png" alt="logo Crédit Agricole">
-                </div>
-                <div>&nbsp;</div>
                 <div class="logo">
                     <img src="ImagesduSite/logo-fdva-40580.png" alt="logo FDV2A">
                 </div>
+                 <div>&nbsp;</div>
+                <div class="logo">
+                    <img src="ImagesduSite/Logo_Credit_Agricole.png" alt="logo Crédit Agricole">
                 </div>
+                </div>
+                
                 <div class="logo">
                     <img src="ImagesduSite/Logo_monument_historique_-_rouge.png" alt="logo Monument Historique">
                 </div>
             </div>
         </section>
+        
 
 </main>
 <footer>

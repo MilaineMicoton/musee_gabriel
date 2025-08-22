@@ -1,5 +1,6 @@
 /*
 /* Reset */  
+
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +22,18 @@ main {
         url("/font-family-myriad-pro/MYRIADPRO-REGULAR.OTF") format("opentype");
 }
 
+/* popover 
+:popover-open {
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        inset: unset;
+        margin: 0;
+        border: solid;
+        padding: 10px;
+        top:5px;
+        right:5px;
+      }
 
 /* General styles  and typographie pour les écrans tablettes et pc */
 
@@ -105,10 +118,9 @@ article > p {
 header {
     padding: 0px;
     max-width: 100vw;
-
+/* ne pas mettre sticky car ne fonctionne pas sur cette page */
     align-items: center;
     box-sizing: border-box;
-    position:sticky;
     top: 0;
     }
 
@@ -118,13 +130,7 @@ header {
     height: 100%;
 } 
 
-#burger-icone {
-    width:40px;
-    height:40px;
-    position: absolute;
-    top:20px;
-    right:20px;
-}
+
 /* -------dessin musée manipulations ici----- */
 
 
@@ -180,18 +186,45 @@ header a{
     color: white;
     text-decoration: none;
 }
+/* le style du burger */
+
+#burger-icone {
+    width:40px;
+    height:40px;
+    position: absolute;
+    top:20px;
+    right:20px;
+    line-height: 30px;
+    text-align: center;
+    font-family: ardoise, sans-serif;
+    font-size: 3em;
+    font-weight: bolder;
+    border-style:none;
+    background-color:#f7dd9c;
+}
 /* style de la boite (cachée ou pas) contenant les liens */
-.pop-up-menu {
+#pop-up-menu {
   background-color: #004160;;
   border: solid;
   border-color: #004160;
   padding: 10px;
   position:absolute;
-  /*top:0;
-  /*right:0;*/
-  top: -9999px;
-  right: -9999px;
+  top:5px;
+  right:5px;
+  
 }
+/* popover */
+:popover-open {
+        width:260px;
+        height:170px;
+        position: absolute;
+        inset: unset;
+        margin: 0;
+        border: solid;
+        padding: 10px;
+        top:0px;
+        right:0px;
+      }
 
 /* main */
 
@@ -202,7 +235,14 @@ main {
     height: auto;
     box-sizing: border-box;
 }
+/* réduire la taille des section */
 
+section {
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+} 
 
 
 /*  à partir de là c différent****/
@@ -276,4 +316,3 @@ main {
     font-weight: bold;
     
 }
-

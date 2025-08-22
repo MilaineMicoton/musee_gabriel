@@ -108,24 +108,14 @@ header {
 
     align-items: center;
     box-sizing: border-box;
-    position:sticky;
+/* position sticky ne marche pas avec toggle*/
     top: 0;
-
     }
-
 
 .logo-soleil-musee {
     width: 100%;
     height: 100%;
 } 
-
-#burger-icone {
-    width:40px;
-    height:40px;
-    position: absolute;
-    top:20px;
-    right:20px;
-}
 
 /* ----------dessin musée manipulations ici ----------- */
 
@@ -182,18 +172,45 @@ header a{
     color: white;
     text-decoration: none;
 }
+/* le style du burger */
+
+#burger-icone {
+    width:40px;
+    height:40px;
+    position: absolute;
+    top:20px;
+    right:20px;
+    line-height: 30px;
+    text-align: center;
+    font-family: ardoise, sans-serif;
+    font-size: 3em;
+    font-weight: bolder;
+    border-style:none;
+    background-color:#f7dd9c;
+}
 /* style de la boite (cachée ou pas) contenant les liens */
-.pop-up-menu {
+#pop-up-menu {
   background-color: #004160;;
   border: solid;
   border-color: #004160;
   padding: 10px;
   position:absolute;
-  /*top:0;
-  /*right:0;*/
-  top: -9999px;
-  right: -9999px;
+  top:5px;
+  right:5px;
+  
 }
+/* popover */
+:popover-open {
+        width:260px;
+        height:170px;
+        position: absolute;
+        inset: unset;
+        margin: 0;
+        border: solid;
+        padding: 10px;
+        top:0px;
+        right:0px;
+      }
 
 
 
