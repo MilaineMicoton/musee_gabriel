@@ -8,6 +8,7 @@
 main{
     background-color:#f0ece2;
 }
+
 @font-face {
     font-family: "ardoise";
     src:
@@ -114,7 +115,8 @@ header {
     padding: 0px;
     margin: 0px;
     max-width: 100vw;
-
+/* pos relative permet de définir la place des éléments enfants absolute du header */
+    position:relative;
     align-items: center;
     box-sizing: border-box;
 /* sticky ne fonctionne pas avec le toggle*/
@@ -151,13 +153,24 @@ header {
     display:none;
 }
 }
+/* positionner le fdva (absolute) par rapport à son parent le header (relative) */
+.fdva {
+    width:80px;
+    height:auto;
+    position:absolute;
+    bottom:5%;
+    left: 32.5%;
+ 
+}
+
+/* puis ajuster le fdva et le dessin musée selon les tailles d'écrans*/
 
 @media (min-width:375px) {
 .fdva {
     width:30px;
     position:absolute;
-    top:10%;
-    right:7%;
+    bottom:6%;
+    left: 32.5%;
 }
 }
 
@@ -165,10 +178,11 @@ header {
 .fdva {
     width:50px;
     position:absolute;
-    top:11%;
-    right:4%;
+    bottom:6%;
+    left: 32.5%;
 }
 }
+
 
 @media (min-width:768px) {
 .dessin-musee {
@@ -184,10 +198,11 @@ header {
 .fdva {
     width:80px;
     position:absolute;
-    top:21%;
-    left:32%;
+    bottom:6%;
+    left:32.5%;
 }
-}
+}   
+
 
 @media (min-width:1024px) {
 .dessin-musee {
@@ -209,8 +224,8 @@ header {
 .fdva {
     width:110px;
     position:absolute;
-    top:28%;
-    left:32%;
+    bottom:6%;
+    left:32.5%;
 }
 }
 @media (min-width:1400px) {
@@ -224,11 +239,12 @@ header {
 .dessin-musee > img {
     width:100%;
 }
+
 .fdva {
-    width:150px;
+    width:120px;
     position:absolute;
-    top:28%;
-    left:32%;
+    bottom:6%;
+    left:32.5%;
 }
 }
 
