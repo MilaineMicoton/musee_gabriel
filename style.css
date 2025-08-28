@@ -165,7 +165,7 @@ header {
 
 /* puis ajuster le fdva et le dessin musée selon les tailles d'écrans*/
 
-@media (min-width:375px) {
+@media (min-width:321px) {
 .fdva {
     width:30px;
     position:absolute;
