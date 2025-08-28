@@ -56,28 +56,41 @@ article > p {
     hyphens: auto;
 }
 
-/* ---------------taille des polices pour les tablettes --------*/
+/* enlever le bandeau photo dates et horaires sur grand écran (prévu pour les petits) */
 
-@media screen and (width <=769px) {
+@media screen and (width >=426px) {
+    .titre-et-horaires-petit-ecran {
+        display:none;
+    }
+}
+/* pour les petits écran, enlever le h1 titre et horaires
+@media screen and (width <=426px) {
+    .titre-et-horaires-grand-ecran {
+        display: none;
+    }
+}
+/* ---------------taille des polices pour les tablettes et les pc portables--------*/
+
+@media screen and (width <=1025px) {
     h1{
-    font-size:  1.5em;
+    font-size:  1.6em;
     margin-left: 5%;
-    text-align: left;
+    text-align: center;
     }
     
 }
 
-/* ---------------taille des polices pour les portables -------- */
+/* ---------------taille des polices pour les tel portables -------- */
 
 @media screen and (width <= 426px){
     
     h1 {
         text-align: center;
-        text-wrap: nowrap;
+        text-wrap: wrap;
         margin:0;
         font-family: ardoise, sans-serif;
         font-weight: bold;
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
     
     h2 {
@@ -138,6 +151,18 @@ header {
     height:auto;
     position:absolute;
     top: 65px;
+    right:0px;
+}
+.dessin-musee > img {
+    width:100%;
+}
+}
+@media (min-width:1400px) {
+.dessin-musee {
+    width: 400px;
+    height:auto;
+    position:absolute;
+    top: 55px;
     right:0px;
 }
 .dessin-musee > img {
@@ -343,13 +368,19 @@ donc on supprime les versions redondantes */
     height:auto;
 }
 .logo-latronquiere > img {
-    width:60px;
+    width:90px;
+    height:auto;
 }
 @media(max-width:760px){
     .logo > img {
     width: 60px;
     height:auto;
 }
+    .logo-latronquiere > img {
+    width:50px;
+    height:auto;
+}
+
 }
 
 /*--------------- footer ------------------*/

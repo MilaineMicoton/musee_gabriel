@@ -66,17 +66,17 @@ article > p {
     text-align: left;
     hyphens: auto;
 }
-/* ---------------taille des polices pour les tablettes --------*/
+/* ---------------taille des polices pour les tablettes et les pc portables --------*/
 
-@media screen and (width <=769px) {
+@media screen and (width <=1024px) {
     h1{
-    font-size:  1.5em;
+    font-size:  1.6em;
     margin-left: 5%;
     text-align: left;
     }
     
 }
-/* ---------------taille des polices pour les portables -------- */
+/* ---------------taille des polices pour les tel portables -------- */
 
 @media screen and (width <= 426px){
     
@@ -86,7 +86,7 @@ article > p {
         margin:0;
         font-family: ardoise, sans-serif;
         font-weight: bold;
-        font-size: 1.5em;
+        font-size: 1.1em;
     }
     
     h2 {
@@ -142,18 +142,50 @@ header {
     border-style:none;
     background-color:#f7dd9c;
 }
-/* ----------dessin musée manipulations ici ----------- */
+
+
+/* ----------dessin musée manipulations ici ainsi que le logo header FDVA----------- */
+
+@media (max-width:320px) {
+.fdva {
+    display:none;
+}
+}
+
+@media (min-width:375px) {
+.fdva {
+    width:30px;
+    position:absolute;
+    top:10%;
+    right:7%;
+}
+}
+
+@media (min-width:425px) {
+.fdva {
+    width:50px;
+    position:absolute;
+    top:11%;
+    right:4%;
+}
+}
 
 @media (min-width:768px) {
 .dessin-musee {
     width: 220px;
     height:auto;
     position:absolute;
-    top:55px;
+    top: 55px;
     right:10px;
 }
 .dessin-musee > img {
     width:100%;
+}
+.fdva {
+    width:80px;
+    position:absolute;
+    top:21%;
+    left:32%;
 }
 }
 
@@ -162,11 +194,41 @@ header {
     width: 300px;
     height:auto;
     position:absolute;
-    top: 65px;
+    top: 55px;
     right:0px;
 }
 .dessin-musee > img {
     width:100%;
+}
+.remove {
+    display:none;
+}
+.texte-bienvenue {
+    margin-left:2%;
+}
+.fdva {
+    width:110px;
+    position:absolute;
+    top:28%;
+    left:32%;
+}
+}
+@media (min-width:1400px) {
+.dessin-musee {
+    width: 400px;
+    height:auto;
+    position:absolute;
+    top: 55px;
+    right:0px;
+}
+.dessin-musee > img {
+    width:100%;
+}
+.fdva {
+    width:150px;
+    position:absolute;
+    top:28%;
+    left:32%;
 }
 }
 
@@ -177,8 +239,13 @@ header {
     .dessin-musee > img {
     display:none;
     }
+
 }
 
+
+.fdva > img {
+    width:100%;
+}
 
 /* ---------------------boite cachée (ou pas) du menu----------------- */
 
@@ -436,17 +503,27 @@ donc on supprime les versions redondantes */
 
 /* troisième section, déterminer la taille de base du texte et de la photo */
 
-.photoFacade {
-    max-width:400px;
-    min-width:300px;
+.batiment {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 100%;
+    max-height: auto;
 }
 
-.PhotoFacade > img {
-    width:100%;
+.photo-batiment {
+    width: 300px;
+    padding: 20px 0 0 0;
+    margin:10px 0 20px 0;
 }
-.paragraphe-batiment {
-    min-width:300px;
-    max-width: 400px;
+
+.photo-batiment > img {
+    width:100%;
+
+}
+
+.article-batiment {
+    width:300px;
 }
 .paragraphe-batiment > article{
     text-align:left;
@@ -454,11 +531,11 @@ donc on supprime les versions redondantes */
 }
 
 
-/* pour les formats PC & tablette, la photo et le texte sont cote à cote, le bouton sous le texte */
+/* pour les formats PC & tablette, la photo et le texte sont cote à cote, le bouton sous le texte 
 
 @media (min-width:768px) {
 
-/* conteneur flex */
+/* conteneur flex 
     .container-section3 {
     display: flex;
     max-width: 100%;
@@ -471,15 +548,15 @@ donc on supprime les versions redondantes */
     height: auto;
     padding: 10px;
     }
-    .paragraphe-batiment {
+  /*  .paragraphe-batiment {
     width: 100%;
     display:flex;
     justify-content:center;
     flex-wrap: wrap;
     }
-}
+}*/
 
-/* centrer le texte dans sa div */
+/* centrer le texte dans sa div 
 
 .paragraphe-batiment > p {
     padding-top: 5%;
@@ -508,6 +585,9 @@ donc on supprime les versions redondantes */
     color: #ffcf53;
 }
 @media(max-width:767px) {
+    .box {
+        padding:15px 0 0 0;
+    }
     .bouton-vers-nous-trouver-300 {
         margin: auto;
     }
@@ -530,11 +610,16 @@ donc on supprime les versions redondantes */
     height:auto;
 }
 .logo-latronquiere > img {
-    width:60px;
+    width:90px;
+    height:auto;
 }
 @media(max-width:760px){
     .logo > img {
     width: 60px;
+    height:auto;
+}
+    .logo-latronquiere > img {
+    width:50px;
     height:auto;
 }
 
