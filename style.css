@@ -5,7 +5,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-main{
+
+main , body {
     background-color:#f0ece2;
 }
 
@@ -20,23 +21,12 @@ main{
     src:
         url("/font-family-myriad-pro/MYRIADPRO-REGULAR.OTF") format("opentype");
 }
-/* popover */
-:popover-open {
-        width: 300px;
-        height: 200px;
-        position: absolute;
-        inset: unset;
-        margin: 0;
-        border: solid;
-        padding: 10px;
-        top:5px;
-        right:5px;
-      }
+
 /* General styles  and typographie pour les écrans tablettes et pc */
 
 
 h1 {
-    text-align: center;
+    text-align: left;
 }
 h1, h3 {
     font-family: ardoise, sans-serif;
@@ -58,7 +48,7 @@ h4 {
 }
 
 p {
-    font-family: myriad-pro;
+    font-family: myriad-pro, sans-serif;
     font-size: 1em;
     text-align: center;
 }
@@ -67,52 +57,13 @@ article > p {
     text-align: left;
     hyphens: auto;
 }
-/* ---------------taille des polices pour les tablettes et les pc portables --------*/
 
-@media screen and (width <=1024px) {
-    h1{
-    font-size:  1.6em;
-    margin-left: 5%;
-    text-align: left;
-    }
-    
-}
-/* ---------------taille des polices pour les tel portables -------- */
 
-@media screen and (width <= 426px){
-    
-    h1 {
-        text-align: center;
-        text-wrap: nowrap;
-        margin:0;
-        font-family: ardoise, sans-serif;
-        font-weight: bold;
-        font-size: 1.1em;
-    }
-    
-    h2 {
-    font-family: ardoise, sans-serif;
-    font-weight: bold;
-    font-size: 1.5em;
-    }
-    a, h3 {
-    font-family: ardoise, sans-serif;
-    font-weight: bold;
-    font-size: 1.2em;
-    }
-
-    p {
-    font-family: myriad-pro;
-    font-size: 1em;
-    text-align: center;
-    }
-    
-}
 
 /*-------------------le header------------------- */
 
 header {
-    padding: 0px;
+    padding: 0 10px 0 10px;
     margin: 0px;
     max-width: 100vw;
 /* pos relative permet de définir la place des éléments enfants absolute du header */
@@ -121,14 +72,27 @@ header {
     box-sizing: border-box;
 /* sticky ne fonctionne pas avec le toggle*/
     top: 0;
-
     }
-
-
-.logo-soleil-musee {
+   
+.logo-soleil-musee-court {
     width: 100%;
     height: 100%;
 } 
+.logo-soleil-musee-long {
+    width:100%;
+    height:100%;
+}
+
+.bandeau-horaires-musee-court {
+    width: 100%;
+    height: 100%;
+} 
+.bandeau-horaires-musee-long {
+    width:100%;
+    height:100%;
+}
+
+/* ---------- l'icone du menu burger -------*/
 
 #burger-icone {
     width:40px;
@@ -143,124 +107,6 @@ header {
     font-weight: bolder;
     border-style:none;
     background-color:#f7dd9c;
-}
-
-
-/* ----------dessin musée manipulations ici ainsi que le logo header FDVA----------- */
-
-@media (max-width:320px) {
-.fdva {
-    display:none;
-}
-}
-/* positionner le fdva (absolute) par rapport à son parent le header (relative) */
-.fdva {
-    width:80px;
-    height:auto;
-    position:absolute;
-    bottom:5%;
-    left: 32.5%;
- 
-}
-
-/* puis ajuster le fdva et le dessin musée selon les tailles d'écrans*/
-
-@media (min-width:321px) {
-.fdva {
-    width:30px;
-    position:absolute;
-    bottom:6%;
-    left: 32.5%;
-}
-}
-
-@media (min-width:425px) {
-.fdva {
-    width:50px;
-    position:absolute;
-    bottom:6%;
-    left: 32.5%;
-}
-}
-
-
-@media (min-width:768px) {
-.dessin-musee {
-    width: 220px;
-    height:auto;
-    position:absolute;
-    top: 55px;
-    right:10px;
-}
-.dessin-musee > img {
-    width:100%;
-}
-.fdva {
-    width:80px;
-    position:absolute;
-    bottom:6%;
-    left:32.5%;
-}
-}   
-
-
-@media (min-width:1024px) {
-.dessin-musee {
-    width: 300px;
-    height:auto;
-    position:absolute;
-    top: 55px;
-    right:0px;
-}
-.dessin-musee > img {
-    width:100%;
-}
-.remove {
-    display:none;
-}
-.texte-bienvenue {
-    margin-left:2%;
-}
-.fdva {
-    width:110px;
-    position:absolute;
-    bottom:6%;
-    left:32.5%;
-}
-}
-@media (min-width:1400px) {
-.dessin-musee {
-    width: 400px;
-    height:auto;
-    position:absolute;
-    top: 55px;
-    right:0px;
-}
-.dessin-musee > img {
-    width:100%;
-}
-
-.fdva {
-    width:120px;
-    position:absolute;
-    bottom:6%;
-    left:32.5%;
-}
-}
-
-@media (max-width:767px) {
-    .dessin-musee {
-    display: none;
-}
-    .dessin-musee > img {
-    display:none;
-    }
-
-}
-
-
-.fdva > img {
-    width:100%;
 }
 
 /* ---------------------boite cachée (ou pas) du menu----------------- */
@@ -293,7 +139,18 @@ header a{
   
 }
 
-
+/* popover */
+:popover-open {
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        inset: unset;
+        margin: 0;
+        border: solid;
+        padding: 10px;
+        top:5px;
+        right:5px;
+      }
 
 /* ******************************** à partir de là c'est différent pour ls autres pages ***************/
 
@@ -306,11 +163,7 @@ header a{
     text-align: center;
     padding: 0px 10px 10px 10px;
 }
-@media  (max-width: 425px) {
-    .bandeau-intercalaire {
-        font-size: 1.5em;
-    }
-}
+
 /* main */
 
 main {
@@ -320,10 +173,10 @@ main {
     height: auto;
     box-sizing: border-box;
 }
-/* réduire la taille des section */
+/* réduire la taille des sections */
 
 section {
-    padding: 10px;
+    padding: 0 10px 10px 10px;
     max-width: 100%;
     height: auto;
     box-sizing: border-box;
@@ -332,24 +185,12 @@ section {
 
 /* ajuster la taille des images et du texte sur le sculpteur GEK */
 
-.photo1 > img {
+.photo-GEK > img {
     width:300px;
     height:auto;
 }
-
-.photo2 > img {
-    width:300px;
-    height:auto;
-}
-.photo3 > img {
-    width:300px;
-    height:auto;
-}
-
-
 
 /* flex container des photos, 1ere section*/
-
 
 .container-photos-sculptures {
     display: flex;
@@ -358,54 +199,13 @@ section {
     max-width: 100%;
     max-height: auto;
 }
+
 .texte-GEK{
     width:100%;
     height:auto;
-    padding-top: 2%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 2%;
+    padding:0;
 }
 
-@media (max-width: 768px) {
-    .container-photos-sculptures > img{
-        width: 100%;
-        }
-    .texte-GEK{
-        width:300px;
-        height:auto;
-        padding-top: 2%;
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-bottom: 5%;
-    }
-    }
-.bouton-horaires-ouverture {
-    width:250px;
-    height: 60px;
-    border: solid;
-    border-color: #560404;
-    border-radius: 10px;
-    background-color: #457b65;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;;
-}
-.bouton-horaires-ouverture > a {
-
-    text-decoration: none;
-    background-color: #457b65;
-    color: #ffcf53;
-}
-@media (min-width:768px) {
-    .bouton-horaires-ouverture {
-        margin: auto;
-    }
-    .texte-GEK > p {
-        margin-bottom: 30px;
-    }
-}
 
 /* flex conteneur des vignettes artiste-image-et-texte-vertical, 2eme section*/
 
@@ -447,75 +247,41 @@ section {
 }
 
 
-/* pour les TELEPHONES PORTABLES et les TRES GRANDS PC, toutes les vignettes horizontales sont supprimées    */
+/* mise en forme des boutons */
 
-@media (max-width:426px) , (min-width:1330px) {
-    .no-display-horizontal-3artistes {
-        display:none;
-    }
-    .no-display-horizontal-4artistes {
-        display:none;
-    }
+.bouton-horaires-ouverture {
+    width:250px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #14573d;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: auto;
 }
-/* lors des changements d'expositions, normalement il suffit de changer le fichier HTML, le code CSS est écrit de manière
-à prendre en compte 2, 3, ou 4 artistes à chaque exposition */
+.bouton-horaires-ouverture > a {
 
-/* s'il y a TROIS ARTISTES, en FORMAT TABLETTE, 
-la 3eme vignette est horizontale et le texte est à droite */
-
-/* s'il y a QUATRE ARTISTES, en FORMAT TABLETTE
-les 4 vignettes sont verticales, 2 par 2
-
-/* Donc s'il y a TROIS ou QUATRE artistes en FORMAT TABLETTE,
-les versions redondantes sont supprimées */
-
-@media (min-width:768px) and (max-width:1000px) {
-
-    .no-display-vertical-3artistes {
-    display:none;
+    text-decoration: none;
+    background-color: #14573d;
+    color: #ffcf53;
 }
-
-    .no-display-horizontal-4artistes {
-    display:none;
-}
-}
-
-/* s'il y TROIS ARTISTES, en FORMAT PC PORTABLE, les 3 premiers sont alignés, 
-et le quatrième horizontal sur la ligne suivante,
-donc on supprime les versions redondantes */
-
-@media  (min-width:1001px) and (max-width:1329px)  {
-    .no-display-horizontal-3artistes {
-        display:none;
-    }
-    .no-display-vertical-4artistes {
-        display:none;
-    }
-}
-
-
-
-/* mise en forme lien vers programme de la saison */
 
 .bouton-vers-programme-saison {
     width:250px;
     height:60px;
     border-radius: 10px;
-    border: solid;
-    border-bottom: #560404;
-    background-color: #457b65;
+    background-color: #14573d;
     text-align: center;
     padding: 10px;
-    margin:auto;
-    
+    margin:auto;   
 }
 
 .bouton-vers-programme-saison > a {
     text-decoration: none;
-    background-color: #457b65;
+    background-color: #14573d;
     color:#ffcf53;
 }
-
 
 /* troisième section, déterminer la taille de base du texte et de la photo */
 
@@ -539,79 +305,16 @@ donc on supprime les versions redondantes */
 }
 
 .article-batiment {
-    width:300px;
+    width:320px;
+    margin:0px;
+    padding:20px;
 }
-.paragraphe-batiment > article{
+.paragraphe-batiment > article {
     text-align:left;
-    padding:10px;
 }
 
 
-/* pour les formats PC & tablette, la photo et le texte sont cote à cote, le bouton sous le texte 
 
-@media (min-width:768px) {
-
-/* conteneur flex 
-    .container-section3 {
-    display: flex;
-    max-width: 100%;
-    justify-content: center;
-    display: wrap;
-    }
-
-    .PhotoFacade > img {
-    width: 100%;
-    height: auto;
-    padding: 10px;
-    }
-  /*  .paragraphe-batiment {
-    width: 100%;
-    display:flex;
-    justify-content:center;
-    flex-wrap: wrap;
-    }
-}*/
-
-/* centrer le texte dans sa div 
-
-.paragraphe-batiment > p {
-    padding-top: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
-/* mise en forme du bouton vers nous trouver */
-
-.bouton-vers-nous-trouver-300 {
-    width:250px;
-    height: 60px;
-    border: solid;
-    border-color: #560404;
-    border-radius: 10px;
-    background-color: #457b65;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;;
-}
-.bouton-vers-nous-trouver-300 > a {
-
-    text-decoration: none;
-    background-color: #457b65;
-    color: #ffcf53;
-}
-@media(max-width:767px) {
-    .box {
-        padding:15px 0 0 0;
-    }
-    .bouton-vers-nous-trouver-300 {
-        margin: auto;
-    }
-    .paragraphe-batiment > p {
-        margin-bottom: 20px;
-
-}
-}
 /* ---------la bande des logos à aligner-------*/
 .bande-logos {
   display: flex;
@@ -629,17 +332,11 @@ donc on supprime les versions redondantes */
     width:90px;
     height:auto;
 }
-@media(max-width:760px){
-    .logo > img {
-    width: 60px;
-    height:auto;
-}
-    .logo-latronquiere > img {
-    width:50px;
+.logo-fdva > img{
+    width:300px;
     height:auto;
 }
 
-}
 
 /*--------------- footer ------------------*/
 
@@ -673,3 +370,420 @@ donc on supprime les versions redondantes */
     font-weight: bold;
     
 }
+/* ------------------------les media queries-------------------------- */
+/*-------------------------------------------------------------------- */
+
+/* marges extérieures sur le body selon la taille de l'écran */
+
+@media screen and (width >=800px) {
+body {
+    margin: 0 40px 0 40px;
+}
+}
+
+@media screen and (width >=1200px) {
+body {
+    margin: 0 70px 0 70px;
+}
+}
+
+@media screen and (width >=1300px) {
+body {
+    margin: 0 130px 0 130px;
+}
+}
+@media screen and (width >=1450px) {
+body {
+    margin: 0 150px 0 150px;
+}
+.container-photos-sculptures {
+    justify-content:space-between;
+}
+}
+
+@media screen and (width >=1586px) {
+body {
+    margin: 0 200px 0 200px;
+}
+}
+@media screen and (width >=2000px) {
+body {
+    margin: 0 400px 0 400px;
+}
+}
+
+/* ---------------taille des polices pour les tablettes et les pc portables --------*/
+
+@media screen and (width <=1024px) {
+    h1{
+    font-size:  1.6em;
+    margin-left: 5%;
+    text-align: left;
+    }
+    
+}
+/* ---------------taille des polices pour les tel portables -------- */
+
+@media screen and (width <= 426px){
+    
+    h1 {
+        text-align: center;
+        text-wrap: nowrap;
+        margin:0;
+        font-family: ardoise, sans-serif;
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+    
+    h2 {
+    font-family: ardoise, sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    }
+    a, h3 {
+    font-family: ardoise, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    }
+
+    p {
+    font-family: myriad-pro;
+    font-size: 1em;
+    text-align: center;
+    }
+    
+}
+/* choisir l'image du header selon la largeur de l'écran */
+@media (max-width: 768px){
+    .logo-soleil-musee-long {
+        display:none;
+    }
+}
+@media (min-width: 769px){
+    .logo-soleil-musee-court {
+        display:none;
+    }
+}
+
+/* choisir l'image du bandeau des horaires selon la largeur de l'écran */
+@media (max-width: 630px){
+    .bandeau-horaires-musee-long {
+        display:none;
+    }
+}
+@media (min-width: 631px){
+    .bandeau-horaires-musee-court {
+        display:none;
+    }
+}
+/* puis ajuster le dessin musée et le bandeau horaires selon les tailles d'écrans*/
+
+.bandeau-bleu-et-dessin-musee {
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+}
+/* --------------------- minimum 631px-------------------- */
+
+@media (min-width:631px) {
+.bandeaux-horaires {
+    width: 76%;
+
+}
+.bandeaux-horaires > img {
+    width:100%;
+    height:auto;
+}
+.dessin-musee {
+    width: 23%;
+    height:auto;
+    position:absolute;
+    top:50%;
+    right:0;
+}
+.dessin-musee > img {
+    width:100%;
+    height: auto;
+}
+}  
+/*------------------ minimum 769px--------------------------*/
+
+@media (min-width:769px) {
+.bandeaux-horaires {
+    width: 76%;
+
+}
+.bandeaux-horaires > img {
+    width:100%;
+    height:auto;
+}
+.dessin-musee {
+    width: 23%;
+    height:auto;
+    position:absolute;
+    top:43%;
+    right:0;
+}
+.dessin-musee > img {
+    width:100%;
+    height: auto;
+}
+}  
+
+/* -----------------minimum 1024px--------------------------*/
+
+@media (min-width:1024px) {
+.bandeaux-horaires {
+    width: 76%;
+    height:auto;
+}
+.bandeaux-horaires > img {
+    width:100%;
+    height:auto;
+}
+
+.dessin-musee {
+    width: 23%;
+    height:auto;
+    position:absolute;
+    top: 40%;
+    right:0;
+}
+.dessin-musee > img {
+    width:100%;
+    height:auto;
+}
+}
+/* -----------------minimum 1224px--------------------------*/
+
+@media (min-width:1224px) {
+.bandeaux-horaires {
+    width: 76%;
+    height:auto;
+}
+.bandeaux-horaires > img {
+    width:100%;
+    height:auto;
+}
+.dessin-musee {
+    width: 23%;
+    height:auto;
+    position:absolute;
+    top: 40%;
+    right:0;
+}
+.dessin-musee > img {
+    width:100%;
+}
+}
+
+/*--------------- minimum 1400px ----------------*/
+
+@media (min-width:1400px) {
+.bandeaux-horaires {
+    width: 76%;
+    height:auto;
+}
+.bandeaux-horaires > img {
+    width:100%;
+    height:auto;
+}
+.dessin-musee {
+    width: 23%;
+    height:auto;
+    position:absolute;
+    top: 40%;
+    right:0;
+}
+.dessin-musee > img {
+    width:100%;
+}
+}
+
+/* ----------------------------minimum 1700px-------------*/
+@media (min-width:1700px) {
+.bandeaux-horaires {
+    width: 76%;
+    height:auto;
+}
+.bandeaux-horaires > img {
+    width:100%;
+    height:auto;
+}
+.dessin-musee {
+    width: 23%;
+    height:auto;
+    position:absolute;
+    top: 40%;
+    right:0;
+}
+.dessin-musee > img {
+    width:100%;
+}
+}
+/*-------------minimum 2000px -------------------------*/
+
+@media (min-width:2000px) {
+.bandeaux-horaires {
+    width: 76%;
+    height:auto;
+}
+.bandeaux-horaires > img {
+    width:100%;
+    height:auto;
+}
+.dessin-musee {
+    width: 23%;
+    height:auto;
+    position:absolute;
+    top: 40%;
+    right:0;
+}
+.dessin-musee > img {
+    width:100%;
+}
+}
+/* pour les petits écrans, pas de dessin du musée séparé, il est déjà sur la photo (courte) du bandeau */
+
+@media (max-width:630px) {
+    .dessin-musee {
+    display: none;
+}
+    .dessin-musee > img {
+    display:none;
+    }
+}
+
+/* ajuster les photos des sculptures et le texte sur GEK selon la taille de l'écran */
+
+@media (max-width: 1000px) {
+    .container-photos-sculptures > img{
+        width: 100%;
+        }
+    .texte-GEK{
+        width:300px;
+        height:auto;
+        padding-top: 2%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+    }
+    } 
+
+@media (min-width: 1400px) {
+.photo-GEK > img {
+    width:350px;
+    height:auto;
+}
+}
+/* texte GEK */
+@media (min-width:768px) {
+    .texte-GEK > p {
+        margin-bottom: 30px;
+    }
+}
+
+/* taille des bandeaux intercalaires selon l'écran*/
+@media  (max-width: 425px) {
+    .bandeau-intercalaire {
+        font-size: 1.5em;
+    }
+}
+
+/* marge sous le texte du bâtiment selon la taille */
+
+@media (max-width:767px) {
+        .paragraphe-batiment > p {
+        margin-bottom: 20px;
+}
+}
+
+/* taille des logos selon l'écran */
+@media (max-width:760px){
+    .logo > img {
+    width: 60px;
+    height:auto;
+}
+    .logo-latronquiere > img {
+    width:50px;
+    height:auto;
+}
+    .logo-fdva > img{
+    width:180px;
+    height:auto;
+}
+}
+
+/* ----------manipulation des vignettes artistes selon les tailles d'écran ------------------*/
+
+/* pour les TELEPHONES PORTABLES toutes les vignettes horizontales sont supprimées    */
+
+@media (max-width:630px) {
+    .no-display-horizontal-3artistes {
+        display:none;
+    }
+    .no-display-horizontal-4artistes {
+        display:none;
+    }
+}
+
+/* pour les grands pc, supprimer les vignettes horizontales, selon la taille et le nombre d'artistes */
+
+@media (min-width:1330px) {
+    .no-display-horizontal-3artistes {
+        display:none;
+    }
+}
+@media (min-width:1630px) {
+    .no-display-horizontal-4artistes {
+        display:none;
+    }
+}
+
+/* lors des changements d'expositions, normalement il suffit de changer le fichier HTML, le code CSS est écrit de manière
+à prendre en compte 2, 3, ou 4 artistes à chaque exposition*/
+
+/* s'il y a TROIS ARTISTES, en FORMAT TABLETTE, 
+la 3eme vignette est horizontale et le texte est à droite */
+
+/* s'il y a QUATRE ARTISTES, en FORMAT TABLETTE
+les 4 vignettes sont verticales, 2 par 2
+
+/* Donc s'il y a TROIS ou QUATRE artistes en FORMAT TABLETTE,
+les versions redondantes sont supprimées */
+
+/* NB sur cette page le point de rupture petit écran des vignettes est 630px,
+ et non 605px comme sur la page expositions */
+
+
+@media (min-width:631px) and (max-width:1000px) {
+
+    .no-display-vertical-3artistes {
+    display:none;
+}
+
+    .no-display-horizontal-4artistes {
+    display:none;
+}
+}
+
+@media (min-width:1345px) and (max-width:1630px) {
+    .no-display-vertical-4artistes {
+        display:none;
+    }
+}
+
+/* s'il y TROIS ARTISTES, en FORMAT PC PORTABLE, les 3 premiers sont alignés, 
+et le quatrième horizontal sur la ligne suivante,
+donc on supprime les versions redondantes */
+
+@media  (min-width:1001px) and (max-width:1329px)  {
+    .no-display-horizontal-3artistes {
+        display:none;
+    }
+    .no-display-vertical-4artistes {
+        display:none;
+    }
+}
+/* ------------------Fin du code, hourra! ------------------*/
+
