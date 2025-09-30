@@ -9,7 +9,7 @@
 main , body {
     background-color:#f0ece2;
 }
-
+/*
 @font-face {
     font-family: "ardoise";
     src:
@@ -25,6 +25,11 @@ main , body {
 /* General styles  and typographie pour les écrans tablettes et pc */
 
 
+span {font-family: ardoise, sans-serif;
+    font-weight:normal;
+    font-size: 1.2em;
+
+}
 h1 {
     text-align: left;
 }
@@ -54,8 +59,8 @@ p {
 }
 
 article > p {
-    text-align: left;
-    hyphens: auto;
+    text-align: justify;
+    hyphens: none;
 }
 
 
@@ -142,7 +147,7 @@ header a{
 /* popover */
 :popover-open {
         width: 300px;
-        height: 200px;
+        height: 190px;
         position: absolute;
         inset: unset;
         margin: 0;
@@ -154,15 +159,6 @@ header a{
 
 /* ******************************** à partir de là c'est différent pour ls autres pages ***************/
 
-.bandeau-intercalaire {
-    max-width: 100 vw;
-    background-color: #004160;
-    color: white;
-    font-family: ardoise;
-    font-size: 2em;
-    text-align: center;
-    padding: 0px 10px 10px 10px;
-}
 
 /* main */
 
@@ -176,11 +172,21 @@ main {
 /* réduire la taille des sections */
 
 section {
-    padding: 0 10px 10px 10px;
+    padding: 0 10px 5px 10px;
     max-width: 100%;
     height: auto;
     box-sizing: border-box;
 } 
+
+.bandeau-intercalaire {
+    max-width: 100 vw;
+    background-color: #004160;
+    color: white;
+    font-family: ardoise;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0.5rem 5px 0.5rem 5px;
+}
 
 
 /* ajuster la taille des images et du texte sur le sculpteur GEK */
@@ -205,6 +211,7 @@ section {
     height:auto;
     padding:0;
 }
+
 
 
 /* flex conteneur des vignettes artiste-image-et-texte-vertical, 2eme section*/
@@ -253,9 +260,9 @@ section {
     width:250px;
     height: 60px;
     border-radius: 10px;
-    background-color: #14573d;
+    background-color:#004160;
     text-align: center;
-    padding: 10px;
+    padding:18px 0 0 0;
     margin-top: 20px;
     margin-bottom: 20px;
     margin: auto;
@@ -263,24 +270,25 @@ section {
 .bouton-horaires-ouverture > a {
 
     text-decoration: none;
-    background-color: #14573d;
-    color: #ffcf53;
+    background-color:#004160;
+    color:white;
 }
 
 .bouton-vers-programme-saison {
     width:250px;
     height:60px;
     border-radius: 10px;
-    background-color: #14573d;
+    background-color:#004160;
     text-align: center;
-    padding: 10px;
+    padding:18px 0 0 0;
     margin:auto;   
 }
 
 .bouton-vers-programme-saison > a {
     text-decoration: none;
-    background-color: #14573d;
-    color:#ffcf53;
+    background-color:#004160;
+    color: white;
+    padding:0;
 }
 
 /* troisième section, déterminer la taille de base du texte et de la photo */
@@ -305,10 +313,11 @@ section {
 }
 
 .article-batiment {
-    width:320px;
+    width:300px;
     margin:0px;
     padding:20px;
 }
+/*
 .paragraphe-batiment > article {
     text-align:left;
 }
@@ -322,19 +331,30 @@ section {
   justify-content: space-around;
   flex-wrap:nowrap;
   max-width:100%;
+  margin-top:10px;
+  margin-bottom: 10px;
 }
 
 .logo > img {
     width:110px;
     height:auto;
+    padding:0 10px 0 10px;
 }
 .logo-latronquiere > img {
     width:90px;
     height:auto;
 }
 .logo-fdva > img{
-    width:300px;
+    width:170px;
     height:auto;
+    padding-left:0;
+}
+.logo-ca > img {
+    width: 150px;
+    height:auto;
+}
+.logo-mh > img {
+    padding-right:0;
 }
 
 
@@ -424,6 +444,12 @@ body {
 }
 /* ---------------taille des polices pour les tel portables -------- */
 
+@media screen and (width <= 520px){
+    .menu-footer > a {
+        font-size: 0.8em;
+    }
+}
+
 @media screen and (width <= 426px){
     
     h1 {
@@ -452,6 +478,9 @@ body {
     text-align: center;
     }
     
+    .menu-footer > a {
+        font-size: 0.6em;
+    }
 }
 /* choisir l'image du header selon la largeur de l'écran */
 @media (max-width: 768px){
@@ -664,9 +693,9 @@ body {
         width:300px;
         height:auto;
         padding-top: 2%;
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-bottom: 5%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-bottom: 2%;
     }
     } 
 
@@ -686,7 +715,7 @@ body {
 /* taille des bandeaux intercalaires selon l'écran*/
 @media  (max-width: 425px) {
     .bandeau-intercalaire {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 }
 
@@ -710,6 +739,30 @@ body {
 }
     .logo-fdva > img{
     width:180px;
+    height:auto;
+}
+ .logo-ca > img{
+    width:180px;
+    height:auto;
+}
+}
+
+@media (max-width:630px){
+    .logo > img {
+    width: 50px;
+    height:auto;
+    padding:5px;
+}
+    .logo-latronquiere > img {
+    width:50px;
+    height:auto;
+}
+    .logo-fdva > img{
+    width:100px;
+    height:auto;
+}
+    .logo-ca > img{
+    width:80px;
     height:auto;
 }
 }

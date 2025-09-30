@@ -24,6 +24,10 @@ main , body {
 
 /* General styles  and typographie pour les écrans tablettes et pc */
 
+span {font-family: ardoise, sans-serif;
+    font-weight:normal;
+    font-size: 1.2em;
+}
 
 h1 {
     text-align: center;
@@ -46,9 +50,25 @@ h4 {
     color: red;
     
 }
+h6 , h7 , h8 {
+    font-family: ardoise, sans-serif;
+    font-weight: bold;
+    font-size: 1.8em;
+    text-align: center;
+
+}
+
+h7{
+    font-size:1.5em;
+}
+
+h8{
+    font-size:1.2em;
+}
+
 
 p {
-    font-family: myriad-pro;
+    font-family: myriad-pro, sans-serif;
     font-size: 1em;
     text-align: center;
 }
@@ -141,7 +161,7 @@ header a{
 /* popover */
 :popover-open {
         width:260px;
-        height:170px;
+        height:190px;
         position: absolute;
         inset: unset;
         margin: 0;
@@ -163,12 +183,21 @@ main {
 /* réduire la taille des section */
 
 section {
-    padding: 10px;
+    padding: 5px 10px 5px 10px;
     max-width: 100%;
     height: auto;
     box-sizing: border-box;
 } 
 
+.bandeau-intercalaire {
+    max-width: 100 vw;
+    background-color: #004160;
+    color: white;
+    font-family: ardoise;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0.5rem 5px 1rem 5px;
+}
 
 /*  à partir de là c différent****/
 
@@ -201,19 +230,29 @@ section {
   justify-content: space-around;
   flex-wrap:nowrap;
   max-width:100%;
+  margin-top:10px;
+  margin-bottom:10px;
 }
-
 .logo > img {
     width:110px;
     height:auto;
+    padding:0 10px 0 10px;
 }
 .logo-latronquiere > img {
     width:90px;
     height:auto;
 }
 .logo-fdva > img{
-    width:300px;
+    width:170px;
     height:auto;
+    padding-left:0;
+}
+.logo-ca > img {
+    width: 150px;
+    height:auto;
+}
+.logo-mh > img {
+    padding-right:0;
 }
 
 
@@ -305,6 +344,12 @@ body {
 }
 /* ---------------taille des polices pour les tel portables -------- */
 
+@media screen and (width <= 520px){
+    .menu-footer > a {
+        font-size: 0.8em;
+    }
+}
+
 @media screen and (width <= 426px){
     
     h1 {
@@ -333,6 +378,9 @@ body {
     text-align: center;
     }
     
+    .menu-footer > a {
+        font-size: 0.6em;
+    }
 }
 
 /* choisir l'image du header selon la largeur de l'écran */
@@ -389,6 +437,7 @@ body {
     height: auto;
 }
 }
+
 /*------------------ minimum 769px--------------------------*/
 
 @media (min-width:769px) {
@@ -540,7 +589,8 @@ body {
     }
 }
 
-/* taille des logos selon l'écran */
+/* ---------------------taille des logos selon l'écran -----------------*/
+
 @media (max-width:760px){
     .logo > img {
     width: 60px;
@@ -552,6 +602,30 @@ body {
 }
     .logo-fdva > img{
     width:180px;
+    height:auto;
+}
+    .logo-ca > img{
+    width:180px;
+    height:auto;
+}
+}
+
+@media (max-width:630px){
+    .logo > img {
+    width: 50px;
+    height:auto;
+    padding:5px;
+}
+    .logo-latronquiere > img {
+    width:50px;
+    height:auto;
+}
+    .logo-fdva > img{
+    width:100px;
+    height:auto;
+}
+    .logo-ca > img{
+    width:80px;
     height:auto;
 }
 }
