@@ -172,6 +172,21 @@ main {
     text-align: justify;
 }
 
+.bouton-candidature {
+    width:300px;
+    height: 60px;
+    border-radius: 10px;
+    background-color:#004160;
+    text-align: center;
+    padding:10px 5px 0px 5px;
+    margin: auto;
+}
+.bouton-candidature > a {
+
+    text-decoration: none;
+    background-color:#004160;
+    color:white;
+}
 .bandeau-intercalaire {
     max-width: 100 vw;
     background-color: #004160;
@@ -286,6 +301,18 @@ main {
 
 /* ------------------------les media queries-------------------------- */
 /*-------------------------------------------------------------------- */
+
+@media screen and (width <=600px){
+    
+    .bouton-candidature {
+        width:250px;
+        margin:auto;
+        padding:3px 5px 7px 5px;
+        
+    }
+    
+}
+
 @media screen and (width >=800px) {
 body {
     margin: 0 40px 0 40px;

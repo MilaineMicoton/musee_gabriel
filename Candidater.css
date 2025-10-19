@@ -33,7 +33,12 @@ ul , li {
     font-family: myriad-pro, sans-serif;
     font-size: 1em;
     text-align: left;
+    
+}
 
+.liste-envoi {
+    padding:0 0 0 10px;
+    margin:0 0 0 32px;
 }
 
 h1 {
@@ -236,6 +241,32 @@ section {
     font-size:1em;
 }
 
+.conditions {
+    display:flex;
+    justify-content: space-between;
+}
+.conditions-texte {
+    margin:20px 0 20px 0;
+}
+
+.bouton-telecharger {
+    width:200px;
+    height:60px;
+    border-radius: 10px;
+    background-color:#004160;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+
+.bouton-telecharger > a {
+    text-decoration: none;
+    background-color:#004160;
+    color: white;
+}
+
 
 /* ---------la bande des logos à aligner-------*/
 .bande-logos {
@@ -310,6 +341,13 @@ section {
     .flex-container{
         width:100%;
         padding:0;
+    }
+    .bouton-telecharger{
+        width:150px;
+        padding:0 10px 0 10px;
+    }
+    .conditions-texte {
+        margin:0 10px 0 0;
     }
 }
 

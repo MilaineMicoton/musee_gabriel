@@ -9,7 +9,7 @@
 main , body {
     background-color:#f0ece2;
 }
-/*
+
 @font-face {
     font-family: "ardoise";
     src:
@@ -185,7 +185,7 @@ section {
     font-family: ardoise;
     text-align: center;
     font-size: 1.2em;
-    padding: 0.5rem 5px 0.5rem 5px;
+    padding: 0.3rem 5px 0.7rem 5px;
 }
 
 
@@ -255,6 +255,11 @@ section {
 
 
 /* mise en forme des boutons */
+.double-bouton{
+    display:flex;
+    margin:auto;
+    justify-content: space-around;
+}
 
 .bouton-horaires-ouverture {
     width:250px;
@@ -262,12 +267,26 @@ section {
     border-radius: 10px;
     background-color:#004160;
     text-align: center;
-    padding:18px 0 0 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding:12px 0 0 0;
     margin: auto;
 }
 .bouton-horaires-ouverture > a {
+
+    text-decoration: none;
+    background-color:#004160;
+    color:white;
+}
+
+.bouton-candidature {
+    width:250px;
+    height: 60px;
+    border-radius: 10px;
+    background-color:#004160;
+    text-align: center;
+    padding:3px 5px 7px 5px;
+    margin: auto;
+}
+.bouton-candidature > a {
 
     text-decoration: none;
     background-color:#004160;
@@ -280,7 +299,7 @@ section {
     border-radius: 10px;
     background-color:#004160;
     text-align: center;
-    padding:18px 0 0 0;
+    padding:12px 0 0 0;
     margin:auto;   
 }
 
@@ -392,6 +411,20 @@ section {
 }
 /* ------------------------les media queries-------------------------- */
 /*-------------------------------------------------------------------- */
+
+/* d'abord le bouton vers la page des candidatures */
+
+@media screen and (width <=600px){
+    
+    .double-bouton {
+        width:300px;
+        margin:auto;
+        padding:0;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+}
 
 /* marges extérieures sur le body selon la taille de l'écran */
 
