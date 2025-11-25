@@ -286,6 +286,9 @@ section {
     padding:3px 5px 7px 5px;
     margin: auto;
 }
+article > .bouton-candidature {
+    padding: 12px 0 0 0;
+}
 .bouton-candidature > a {
 
     text-decoration: none;
@@ -331,10 +334,14 @@ section {
 
 }
 
+
 .article-batiment {
     width:300px;
     margin:0px;
     padding:20px;
+}
+.article-batiment > img {
+    margin:0 0 0 70px;
 }
 /*
 .paragraphe-batiment > article {
