@@ -649,28 +649,148 @@ body {
 
 /* ----------manipulation des vignettes artistes selon les tailles d'écran ------------------*/
 
-/* pour les TELEPHONES PORTABLES toutes les vignettes horizontales sont supprimées    */
+/* par défaut, les vignettes sont toutes affichées, sauf utilisation de display:none
+
+/*************************************************************************************************/
+/* pour les petits formats (tél portables) TOUTES les vignettes HORIZONTALES sont SUPPRIMEES *****/
+/* et les vignettes verticales s'alignent naturellement une par largeur***************************/
+/* pas d'autre code nécéssaire.*******************************************************************/
+/*************************************************************************************************/
 
 @media (max-width:605px) {
+/*  on supprime d'abord le logo du musée à l'intérieur de la vignette horizontale par prudence */
+    .logo-musee-container-5artistes {
+        display:none;
+    }
     .no-display-horizontal-3artistes {
         display:none;
     }
     .no-display-horizontal-4artistes {
         display:none;
     }
+    /*nouveau code*/
+    .no-display-horizontal-5artistes {
+        display:none;
+    }
+}
+/****************************************************************************/
+/********* ci-dessous code uniquement axé sur !!! 5 !!! artistes ************/
+/****************************************************************************/
+/****************************************************************************/
+/***************** la dernière artiste a 2 vignettes possibles **************/
+/*********************** une horizontale et une verticale *******************/
+/****** et il faut supprimer l'une des deux selon la taille de l'écran*******/
+/****************************************************************************/
+
+/* de 606px à 994 */
+@media (min-width:606px) and (max-width:994px) {
+/* le logo du musée élargit la vignette horizontale, donc on supprime le logo*/
+    .logo-musee-container-5artistes {
+        display:none;
+    }
+/*code qui laisse la vignette horizontale s'afficher */
+    .no-display-vertical-5artistes{
+        display:none;
+    }
+}
+/*   
+/* de 995 à 1512px */
+@media (min-width:995px) and (max-width:1512px){
+/*code qui laisse la vignette verticale s'afficher */
+    .no-display-horizontal-5artistes {
+        display:none;
+    } 
+}
+/* de 1513 à 1588px */
+@media (min-width:1513px) and (max-width:1588px){
+    /*code qui laisse la vignette horizontale s'afficher */
+    .no-display-vertical-5artistes{
+        display:none;
+    }
+}
+/* de 1589 à 1614px */
+@media (min-width:1589px) and (max-width:1614px){
+    /*code qui laisse la vignette verticale s'afficher */
+    .no-display-horizontal-5artistes{
+        display:none;
+    }
+}
+/* de 1615 à 2325px */
+@media (min-width:1615px) and (max-width:2325px){
+    /*code qui laisse la vignette horizontale s'afficher */
+    .no-display-vertical-5artistes{
+        display:none;
+    }
+}
+/*
+/* à partir de 2326px et au dessus*/
+@media (min-width:2326px){
+     /*code qui laisse la vignette verticale s'afficher */
+    .no-display-horizontal-5artistes{
+        display:none;
+    }
+}
+/****************************************************************************/
+/********* ci-dessous code uniquement axé sur !!! 4 !!! artistes ************/
+/****************************************************************************/
+/****************************************************************************/
+/***************** la dernière artiste a 2 vignettes possibles **************/
+/*********************** une horizontale et une verticale *******************/
+/****** et il faut supprimer l'une des deux selon la taille de l'écran*******/
+/****************************************************************************/
+
+/* de 606px à 989 px */
+@media (min-width:606px) and (max-width:989px) {
+/*code qui laisse la vignette verticale s'afficher pour 4 artistes*/
+    .no-display-horizontal-4artistes {
+    display:none;
+    }
+}
+/* de 990 à 1654 px */
+@media  (min-width:990px) and (max-width:1654px)  {
+/*code qui laisse la vignette horizontale s'afficher pour 4 artistes*/
+    .no-display-vertical-4artistes {
+        display:none;
+    }
+}
+ 
+/* à partir de 1655px et au dessus*/
+@media (min-width:1655px) {
+/*code qui laisse la vignette verticale s'afficher pour 4 artistes*/
+    .no-display-horizontal-4artistes {
+        display:none;
+    }   
 }
 
-/* pour les grands pc, supprimer les vignettes horizontales, selon la taille et le nombre d'artistes */
+
+/****************************************************************************/
+/********* ci-dessous code uniquement axé sur !!! 3 !!! artistes ************/
+/****************************************************************************/
+/****************************************************************************/
+/***************** la dernière artiste a 2 vignettes possibles **************/
+/*********************** une horizontale et une verticale *******************/
+/****** et il faut supprimer l'une des deux selon la taille de l'écran*******/
+/****************************************************************************/
+
+
+@media (min-width:606px) and (max-width:1021px) {
+/*code qui laisse la vignette horizontale s'afficher pour 3 artistes*/   
+    .no-display-vertical-3artistes {
+    display:none;
+}
+}
+@media  (min-width:1021px) and (max-width:1329px)  {
+/*code qui laisse la vignette verticale s'afficher pour 3 artistes*/
+    .no-display-horizontal-3artistes {
+        display:none;
+    }
+}
 
 @media (min-width:1330px) {
+/*code qui laisse la vignette verticale s'afficher pour 3 artistes*/
     .no-display-horizontal-3artistes {
         display:none;
-    }
-}
-@media (min-width:1630px) {
-    .no-display-horizontal-4artistes {
-        display:none;
-    }
+    } 
 }
 
 /* lors des changements d'expositions, normalement il suffit de changer le fichier HTML, le code CSS est écrit de manière
@@ -683,36 +803,17 @@ la 3eme vignette est horizontale et le texte est à droite */
 les 4 vignettes sont verticales, 2 par 2
 
 /* Donc s'il y a TROIS ou QUATRE artistes en FORMAT TABLETTE,
-les versions redondantes sont supprimées */
+les versions redondantes sont supprimées 
+
+*/
 
 
-@media (min-width:605px) and (max-width:1000px) {
 
-    .no-display-vertical-3artistes {
-    display:none;
-}
-
-    .no-display-horizontal-4artistes {
-    display:none;
-}
-}
-
-@media (min-width:1345px) and (max-width:1630px) {
-    .no-display-vertical-4artistes {
-        display:none;
-    }
-}
 
 /* s'il y TROIS ARTISTES, en FORMAT PC PORTABLE, les 3 premiers sont alignés, 
 et le quatrième horizontal sur la ligne suivante,
 donc on supprime les versions redondantes */
 
-@media  (min-width:1001px) and (max-width:1329px)  {
-    .no-display-horizontal-3artistes {
-        display:none;
-    }
-    .no-display-vertical-4artistes {
-        display:none;
-    }
-}
+
+
 /* ------------------Fin du code, hourra! ------------------*/

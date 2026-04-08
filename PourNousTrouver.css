@@ -223,6 +223,25 @@ section {
     width:100%;
 }
 
+.bouton-helloasso {
+    width:200px;
+    height:60px;
+    border-radius: 10px;
+    background-color:#004160;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    
+}
+
+.bouton-helloasso > a {
+    text-decoration: none;
+    background-color:#004160;
+    color: white;
+}
+
 /* ---------la bande des logos à aligner-------*/
 .bande-logos {
   display: flex;
