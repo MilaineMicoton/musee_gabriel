@@ -33,6 +33,9 @@ span {font-family: ardoise, sans-serif;
 h1 {
     text-align: left;
 }
+.texte-GEK > h1 {
+    margin-left: 0;
+}
 h1, h3 {
     font-family: ardoise, sans-serif;
     font-weight: bold;
