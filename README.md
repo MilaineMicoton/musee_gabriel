@@ -22,7 +22,7 @@ Déploiement:
     par avance sur le gestionnaire LWS.
 
     Pour ces raisons, il est primodial d'assurer un bon archivage sur git avant 
-    tou déploiement sur LWS. La structure des dossiers doit être identique 
+    tout déploiement sur LWS. La structure des dossiers doit être identique 
     sur les 2 plateformes, ceci est un contrôle manuel.
 
 Structuration des fichiers:
@@ -31,6 +31,10 @@ Structuration des fichiers:
     afin de permettre une maintenance plus efficace.
 
 Prochaines améliorations:
+
+    Faire un merge de la branche "structuration" sur main.
+
+    Proposer l'API Google Map dans la page "Nous trouver", ainsi que le consentement RGPD.
 
     Factorer le code HTML pour éviter la répétition des headers et footers.
 
